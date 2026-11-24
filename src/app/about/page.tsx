@@ -85,7 +85,7 @@ export default function AboutPage() {
           <h2 className="display text-3xl sm:text-4xl">See what we would fix first.</h2>
           <Link
             href="/contact"
-            className="rounded-xl bg-mark px-6 py-4 text-lg font-semibold text-ink hover:bg-paper"
+            className="rounded-xl bg-paper px-6 py-4 text-lg font-semibold text-ink hover:bg-wash"
           >
             Request free audit
           </Link>

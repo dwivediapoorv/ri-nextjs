@@ -258,7 +258,7 @@ export default function Home() {
             </p>
             <Link
               href="/contact"
-              className="inline-block rounded-xl bg-mark px-6 py-4 text-lg font-semibold text-ink hover:bg-paper"
+              className="inline-block rounded-xl bg-paper px-6 py-4 text-lg font-semibold text-ink hover:bg-wash"
             >
               Request free audit
             </Link>
