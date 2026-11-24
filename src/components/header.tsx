@@ -20,11 +20,11 @@ export function Wordmark({ className = "" }: { className?: string }) {
 export function Header() {
   return (
     <HeaderShell>
-      <div className="wrap flex flex-wrap items-center justify-between gap-x-6 gap-y-3 py-4">
-        <Link href="/" className="rounded-md">
+      <div className="wrap grid grid-cols-[1fr_auto_1fr] items-center gap-x-3 py-4 sm:gap-x-6">
+        <Link href="/" className="justify-self-start rounded-md">
           <Wordmark />
         </Link>
-        <nav aria-label="Main" className="flex items-center gap-4 sm:gap-8">
+        <nav aria-label="Main" className="flex items-center gap-5 sm:gap-8">
           {nav
             .filter((n) => n.href !== "/contact")
             .map((n) => (
@@ -38,13 +38,13 @@ export function Header() {
                 {n.label}
               </Link>
             ))}
-          <Link
-            href="/contact?service=other"
-            className="whitespace-nowrap rounded-lg bg-ink px-4 py-2 text-[0.95rem] font-semibold text-paper hover:bg-ultra"
-          >
-            Contact sales
-          </Link>
         </nav>
+        <Link
+          href="/contact?service=other"
+          className="justify-self-end whitespace-nowrap rounded-lg bg-ink px-4 py-2 text-[0.95rem] font-semibold text-paper hover:bg-ultra"
+        >
+          Contact Sales
+        </Link>
       </div>
     </HeaderShell>
   );

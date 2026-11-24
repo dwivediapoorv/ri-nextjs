@@ -243,7 +243,7 @@ export default function Home() {
                 href="/contact?service=other"
                 className="inline-block rounded-xl border-2 border-paper px-6 py-[0.875rem] text-lg font-semibold text-paper hover:bg-paper/10"
               >
-                Contact sales
+                Contact Sales
               </Link>
             </div>
           </div>

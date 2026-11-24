@@ -23,7 +23,7 @@ export function Footer() {
               href="/contact?service=other"
               className="inline-block rounded-xl border-2 border-paper px-5 py-2.5 font-semibold text-paper hover:bg-paper/10"
             >
-              Contact sales
+              Contact Sales
             </Link>
           </div>
         </div>
