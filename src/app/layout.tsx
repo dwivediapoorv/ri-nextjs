@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "@fontsource-variable/bricolage-grotesque";
-import "@fontsource-variable/instrument-sans";
+import "@fontsource-variable/figtree";
 import "./globals.css";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
