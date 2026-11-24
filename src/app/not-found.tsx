@@ -9,9 +9,9 @@ export const metadata: Metadata = {
 export default function NotFound() {
   return (
     <section className="wrap pb-24 pt-16 sm:pt-24">
-      <h1 className="display h-hero max-w-[14ch]">This page does not exist</h1>
+      <h1 className="display h-hero max-w-[14ch]">We can&rsquo;t find that page</h1>
       <p className="mt-6 max-w-[52ch] text-xl text-slate">
-        The link may be old or mistyped. Start from one of these instead.
+        That&rsquo;s on us. The link may be old, or the page may have moved. Here is where to go next.
       </p>
 
       <div className="mt-10 flex flex-wrap gap-3">
