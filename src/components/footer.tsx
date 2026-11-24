@@ -18,6 +18,14 @@ export function Footer() {
           >
             {site.email}
           </a>
+          <div className="mt-6">
+            <Link
+              href="/contact?service=other"
+              className="inline-block rounded-xl border-2 border-paper px-5 py-2.5 font-semibold text-paper hover:bg-paper/10"
+            >
+              Contact sales
+            </Link>
+          </div>
         </div>
         {/* Phone: collapsible groups */}
         <div className="border-t border-paper/15 md:hidden">

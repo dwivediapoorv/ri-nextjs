@@ -257,12 +257,20 @@ export default function Home() {
               Send a store URL and we will reply with what we found and what
               we would fix first.
             </p>
-            <Link
-              href="/contact"
-              className="inline-block rounded-xl bg-paper px-6 py-4 text-lg font-semibold text-ink hover:bg-wash"
-            >
-              Request free audit
-            </Link>
+            <div className="flex flex-wrap gap-3">
+              <Link
+                href="/contact"
+                className="inline-block rounded-xl bg-paper px-6 py-4 text-lg font-semibold text-ink hover:bg-wash"
+              >
+                Request free audit
+              </Link>
+              <Link
+                href="/contact?service=other"
+                className="inline-block rounded-xl border-2 border-paper px-6 py-[0.875rem] text-lg font-semibold text-paper hover:bg-paper/10"
+              >
+                Contact sales
+              </Link>
+            </div>
           </div>
         </div>
       </section>

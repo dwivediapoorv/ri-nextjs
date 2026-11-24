@@ -36,6 +36,12 @@ export function Header() {
               </Link>
             ))}
           <Link
+            href="/contact?service=other"
+            className="hidden rounded-lg border-2 border-ink px-4 py-[0.4rem] text-[0.95rem] font-semibold text-ink hover:border-ultra hover:text-ultra md:inline-block"
+          >
+            Contact sales
+          </Link>
+          <Link
             href="/contact"
             className="rounded-lg bg-ink px-4 py-2 text-[0.95rem] font-semibold text-paper hover:bg-ultra"
           >
