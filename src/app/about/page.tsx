@@ -52,6 +52,7 @@ export default function AboutPage() {
             <p className="mt-1 text-slate">
               Founder. Shopify developer and digital marketer.
             </p>
+            <p className="text-slate">Noida, India</p>
           </div>
           <div className="lg:col-span-8">
             <div className="max-w-[62ch] space-y-4">
@@ -67,19 +68,16 @@ export default function AboutPage() {
                 job-ready skills to students and teams.
               </p>
             </div>
-            <dl className="mt-10 max-w-[62ch] divide-y divide-line border-y border-line">
-              {[
-                ["2012", "Co-founder, Softcrayons Tech Solutions"],
-                ["2013 to 2015", "Software engineer, HCL Technologies"],
-                ["2015 to 2023", "Independent consultant"],
-                ["2023", "Consulting CTO, DigiRocket Technologies"],
-              ].map(([when, what]) => (
-                <div key={when} className="grid grid-cols-[8rem_1fr] gap-4 py-3">
-                  <dt className="display text-lg">{when}</dt>
-                  <dd className="text-slate">{what}</dd>
-                </div>
-              ))}
-            </dl>
+            <p className="mt-6">
+              <a
+                href="https://www.linkedin.com/in/dwivediapoorv/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold text-ultra underline underline-offset-4 hover:text-ink"
+              >
+                Apoorv on LinkedIn (opens in a new tab)
+              </a>
+            </p>
           </div>
         </div>
       </section>
