@@ -99,10 +99,34 @@ details[open] > summary .plus {
   border: 0;
 }
 .drawer[open] {
-  animation: drawer-in 0.25s ease-out;
+  animation: drawer-in 0.3s ease-out;
+}
+.drawer[data-closing] {
+  animation: drawer-out 0.3s ease-in forwards;
 }
 .drawer::backdrop {
   background: rgb(1 23 31 / 0.5);
+}
+.drawer[open]::backdrop {
+  animation: backdrop-in 0.3s ease-out;
+}
+.drawer[data-closing]::backdrop {
+  animation: backdrop-out 0.3s ease-in forwards;
+}
+@keyframes drawer-out {
+  to {
+    transform: translateX(100%);
+  }
+}
+@keyframes backdrop-in {
+  from {
+    opacity: 0;
+  }
+}
+@keyframes backdrop-out {
+  to {
+    opacity: 0;
+  }
 }
 @keyframes drawer-in {
   from {
@@ -110,7 +134,8 @@ details[open] > summary .plus {
   }
 }
 @media (prefers-reduced-motion: reduce) {
-  .drawer[open] {
+  .drawer[open],
+  .drawer[open]::backdrop {
     animation: none;
   }
 }

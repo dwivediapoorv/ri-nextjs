@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 
 type Item = { href: string; label: string };
@@ -9,12 +8,6 @@ type Item = { href: string; label: string };
 export function MobileMenu({ items }: { items: Item[] }) {
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDialogElement>(null);
-  const pathname = usePathname();
-
-  // Close when the route changes.
-  useEffect(() => {
-    ref.current?.close();
-  }, [pathname]);
 
   // Lock page scroll while the drawer is open.
   useEffect(() => {
@@ -30,7 +23,22 @@ export function MobileMenu({ items }: { items: Item[] }) {
     ref.current?.showModal();
     setOpen(true);
   };
-  const hide = () => ref.current?.close();
+  const finish = () => {
+    const d = ref.current;
+    if (!d) return;
+    delete d.dataset.closing;
+    d.close();
+  };
+  const hide = () => {
+    const d = ref.current;
+    if (!d || !d.open || d.dataset.closing) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      d.close();
+      return;
+    }
+    d.dataset.closing = "true";
+    window.setTimeout(finish, 400); // fallback if animationend never fires
+  };
 
   return (
     <>
@@ -52,6 +60,13 @@ export function MobileMenu({ items }: { items: Item[] }) {
         aria-label="Menu"
         className="drawer bg-paper text-ink"
         onClose={() => setOpen(false)}
+        onCancel={(e) => {
+          e.preventDefault();
+          hide();
+        }}
+        onAnimationEnd={(e) => {
+          if (e.target === ref.current && ref.current?.dataset.closing) finish();
+        }}
         onClick={(e) => {
           if (e.target === ref.current) hide();
         }}
