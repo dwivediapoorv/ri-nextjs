@@ -14,6 +14,11 @@
   --font-sans: "Figtree Variable", ui-sans-serif, system-ui, sans-serif;
 }
 
+/* Height of the site header, so the home hero can fill the rest of the screen. */
+:root {
+  --header-h: 4.58rem;
+}
+
 html {
   background: var(--color-paper);
   color: var(--color-ink);

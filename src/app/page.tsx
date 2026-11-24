@@ -69,7 +69,7 @@ export default function Home() {
   return (
     <>
       {/* Hero */}
-      <section className="wrap grid gap-14 pb-20 pt-14 sm:pt-20 lg:grid-cols-12 lg:items-center lg:gap-10">
+      <section className="wrap grid min-h-[calc(100svh-var(--header-h))] content-center gap-14 py-12 lg:grid-cols-12 lg:items-center lg:gap-10">
         <div className="lg:col-span-7">
           <h1 className="display h-hero max-w-[20ch]">
             Give us your store URL. We&rsquo;ll show you what is holding it
