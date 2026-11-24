@@ -73,9 +73,10 @@ export const cases: CaseStudy[] = [
       { label: "Client", value: "Ghaziabad Orthopaedic Association, organiser of the 2025 conference" },
       { label: "Event", value: "UPORTHOCON 2025, the annual conference of the Uttar Pradesh Orthopaedic Association, in Ghaziabad" },
       { label: "Scope", value: "Website, registration portal, payment gateway integration" },
+      { label: "Registrations", value: "Around 750 orthopaedic doctors and 1,200 medical students" },
     ],
     brief:
-      "UPORTHOCON is the annual conference of the Uttar Pradesh Orthopaedic Association. The 2025 edition was hosted in Ghaziabad by the Ghaziabad Orthopaedic Association. We built the conference website, the portal where attendees register, and the payment gateway integration that takes registration payments online.",
+      "UPORTHOCON is the annual conference of the Uttar Pradesh Orthopaedic Association. The 2025 edition was hosted in Ghaziabad by the Ghaziabad Orthopaedic Association. We built the conference website, the portal where attendees register, and the payment gateway integration that takes registration payments online. Around 750 orthopaedic doctors and 1,200 medical students registered through it.",
     sections: [
       {
         pillar: "build",
