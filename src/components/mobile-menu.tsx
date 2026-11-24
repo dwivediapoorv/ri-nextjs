@@ -37,7 +37,7 @@ export function MobileMenu({ items }: { items: Item[] }) {
       return;
     }
     d.dataset.closing = "true";
-    window.setTimeout(finish, 400); // fallback if animationend never fires
+    window.setTimeout(finish, 700); // fallback if animationend never fires
   };
 
   return (
@@ -59,6 +59,7 @@ export function MobileMenu({ items }: { items: Item[] }) {
         id="mobile-menu"
         aria-label="Menu"
         className="drawer bg-paper text-ink"
+        style={{ "--n": items.length + 1 } as CSSProperties}
         onClose={() => setOpen(false)}
         onCancel={(e) => {
           e.preventDefault();
