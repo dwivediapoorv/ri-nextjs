@@ -76,7 +76,7 @@ export default function Home() {
             back.
           </h1>
           <p className="mt-6 max-w-[52ch] text-xl text-slate">
-            Rare Input builds Shopify stores and apps, and runs the SEO and
+            rare Input builds Shopify stores and apps, and runs the SEO and
             marketing that brings buyers to them.
           </p>
           <div className="mt-10 max-w-2xl">

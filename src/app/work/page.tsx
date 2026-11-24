@@ -5,7 +5,7 @@ import { cases } from "@/lib/work";
 export const metadata: Metadata = {
   title: "Work",
   description:
-    "Case studies from Rare Input: Shopify builds, SEO groundwork, ad strategy and tracking for e-commerce brands, plus event websites and registration portals.",
+    "Case studies from rare Input: Shopify builds, SEO groundwork, ad strategy and tracking for e-commerce brands, plus event websites and registration portals.",
   alternates: { canonical: "/work" },
 };
 

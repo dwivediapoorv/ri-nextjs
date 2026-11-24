@@ -7,7 +7,7 @@ export function Wordmark({ className = "" }: { className?: string }) {
   return (
     <span
       className={`display inline-flex items-center text-3xl ${className}`}
-      aria-label="Rare Input"
+      aria-label="rare Input"
     >
       ri
       <span

@@ -5,7 +5,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Rare Input is a small studio that builds Shopify stores and apps and runs the SEO and marketing for them.",
+    "rare Input is a small studio that builds Shopify stores and apps and runs the SEO and marketing for them.",
   alternates: { canonical: "/about" },
 };
 
@@ -28,9 +28,9 @@ export default function AboutPage() {
   return (
     <>
       <section className="wrap pb-14 pt-14 sm:pt-20">
-        <h1 className="display h-hero max-w-[14ch]">About Rare Input</h1>
+        <h1 className="display h-hero max-w-[14ch]">About rare Input</h1>
         <p className="mt-6 max-w-[60ch] text-xl text-slate">
-          Rare Input is a small studio for Shopify brands. We build stores and
+          rare Input is a small studio for Shopify brands. We build stores and
           apps, and we run the SEO and marketing that fills them with the
           right visitors.
         </p>
@@ -47,7 +47,7 @@ export default function AboutPage() {
         <div className="wrap grid gap-10 py-16 lg:grid-cols-12">
           <div className="lg:col-span-4">
             <h2 id="founder-h" className="display h-section">
-              Who runs Rare Input
+              Who runs rare Input
             </h2>
             <Image
               src="/founder.webp"
@@ -58,13 +58,13 @@ export default function AboutPage() {
               className="mt-6 h-40 w-40 rounded-2xl object-cover lg:h-52 lg:w-52"
             />
             <p className="display mt-6 text-2xl">Apoorv Dwivedi</p>
-            <p className="mt-1 text-slate">Founder, Rare Input</p>
+            <p className="mt-1 text-slate">Founder, rare Input</p>
             <p className="text-slate">Noida, India</p>
           </div>
           <div className="lg:col-span-8">
             <div className="max-w-[62ch] space-y-4">
               <p>
-                Apoorv leads development and marketing at Rare Input. He
+                Apoorv leads development and marketing at rare Input. He
                 trained as a developer and moved into marketing, so he can find
                 why a store is not ranking and fix it in the theme code
                 himself.

@@ -10,14 +10,14 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: "Rare Input: Shopify development and e-commerce SEO",
-    template: "%s | Rare Input",
+    default: "rare Input: Shopify development and e-commerce SEO",
+    template: "%s | rare Input",
   },
   description: site.description,
   openGraph: {
     type: "website",
     siteName: site.name,
-    title: "Rare Input: Shopify development and e-commerce SEO",
+    title: "rare Input: Shopify development and e-commerce SEO",
     description: site.description,
   },
 };

@@ -1,5 +1,5 @@
 export const site = {
-  name: "Rare Input",
+  name: "rare Input",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://rareinput.com",
   email: "hello@rareinput.com",
   logo: "/logo.svg",
@@ -10,7 +10,7 @@ export const site = {
     "https://www.instagram.com/rareinput.io",
   ] as string[],
   description:
-    "Rare Input builds Shopify stores and apps, and runs the on-page SEO, technical SEO and e-commerce marketing that brings buyers to them.",
+    "rare Input builds Shopify stores and apps, and runs the on-page SEO, technical SEO and e-commerce marketing that brings buyers to them.",
 };
 
 export const nav = [

@@ -79,7 +79,7 @@ export function Footer() {
       </div>
       <div className="border-t border-paper/15">
         <div className="wrap flex flex-wrap justify-between gap-2 py-5 text-sm text-paper/60">
-          <p>Rare Input</p>
+          <p>rare Input</p>
           <p>
             <Link href="/about" className="hover:text-mark">
               About
