@@ -48,7 +48,7 @@ export function MobileMenu({ items }: { items: Item[] }) {
         aria-expanded={open}
         aria-controls="mobile-menu"
         aria-label="Open menu"
-        className="flex h-10 w-10 items-center justify-center rounded-lg border-2 border-ink sm:hidden"
+        className="flex h-10 w-10 items-center justify-center rounded-lg sm:hidden"
       >
         <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden>
           <path d="M2 4.5h14M2 9h14M2 13.5h14" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
@@ -78,7 +78,7 @@ export function MobileMenu({ items }: { items: Item[] }) {
               type="button"
               onClick={hide}
               aria-label="Close menu"
-              className="flex h-10 w-10 items-center justify-center rounded-lg border-2 border-ink"
+              className="flex h-10 w-10 items-center justify-center rounded-lg"
             >
               <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden>
                 <path d="M3 3l12 12M15 3L3 15" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
