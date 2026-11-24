@@ -15,7 +15,7 @@ export default function ServicesPage() {
       <section className="wrap pb-8 pt-14 sm:pt-20">
         <h1 className="display h-hero max-w-[14ch]">What we do</h1>
         <p className="mt-6 max-w-[56ch] text-xl text-slate">
-          Eight services in three groups. Each page says what we need from you
+          Nine services in three groups. Each page says what we need from you
           to start and what you receive.
         </p>
       </section>

@@ -120,6 +120,42 @@ export const services: Service[] = [
     ],
   },
   {
+    slug: "custom-dashboards",
+    pillar: "build",
+    name: "Custom dashboards and internal tools",
+    tagline: "One screen for the numbers and tasks your team checks every day.",
+    summary:
+      "Web dashboards and internal tools that pull your store, search, ads and spreadsheet data into one place, or give your team a simple screen for work that now lives in spreadsheets and chat threads: order follow-ups, stock checks, client reporting, task tracking.",
+    bring: [
+      "The questions your team asks of the data every week",
+      "Access to the sources: Shopify, GA4, Search Console, ad accounts, spreadsheets",
+      "A list of who will use it and what each person needs to see or do",
+      "The spreadsheets or processes it should replace",
+    ],
+    get: [
+      "A short spec covering users, data sources and the screens, agreed before building",
+      "A web app your team signs in to, with roles and permissions",
+      "Data connections that refresh on a schedule, so nobody exports CSVs by hand",
+      "Charts, tables, filters and saved views built around your questions",
+      "Alerts or reminders where the work needs them, such as a stock level or an overdue task",
+      "Hosting, backups and a handover guide",
+    ],
+    faqs: [
+      {
+        q: "Why not use a Looker Studio or spreadsheet dashboard?",
+        a: "For reading numbers, those are often enough, and we will say so. A custom tool earns its cost when people need to act on the data: assign work, update records, approve things, or see different views by role.",
+      },
+      {
+        q: "Can it connect to the tools we already use?",
+        a: "Usually. Shopify, Google Analytics, Search Console and most ad platforms have APIs we can read from. We check access to each source before quoting.",
+      },
+      {
+        q: "Who owns the dashboard once it is built?",
+        a: "You do. The code and the data stay in your accounts, and we can keep maintaining it on a monthly plan or hand it to your own developers.",
+      },
+    ],
+  },
+  {
     slug: "on-page-seo",
     pillar: "rank",
     name: "On-page SEO",

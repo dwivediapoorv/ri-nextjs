@@ -14,7 +14,7 @@ npm run dev
 ## Edit content
 
 - `src/lib/site.ts`: name, URL, contact email.
-- `src/lib/services.ts`: the three groups (Build, Rank, Grow) and all eight services. Pages, sitemap and footer are generated from this file.
+- `src/lib/services.ts`: the three groups (Build, Rank, Grow) and all nine services. Pages, sitemap and footer are generated from this file.
 
 ## Contact form
 

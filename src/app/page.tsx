@@ -76,6 +76,7 @@ const jsonLd = {
   serviceType: [
     "Shopify store development",
     "Shopify app development",
+    "Custom dashboards and internal tools",
     "On-page SEO",
     "Technical SEO",
     "E-commerce marketing",
