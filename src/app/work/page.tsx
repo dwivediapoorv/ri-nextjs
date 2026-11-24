@@ -5,7 +5,7 @@ import { cases } from "@/lib/work";
 export const metadata: Metadata = {
   title: "Work",
   description:
-    "Case studies from Rare Input: Shopify builds, SEO groundwork, ad strategy and tracking for e-commerce brands.",
+    "Case studies from Rare Input: Shopify builds, SEO groundwork, ad strategy and tracking for e-commerce brands, plus event websites and registration portals.",
   alternates: { canonical: "/work" },
 };
 
@@ -15,8 +15,8 @@ export default function WorkPage() {
       <section className="wrap pb-10 pt-14 sm:pt-20">
         <h1 className="display h-hero max-w-[12ch]">Work</h1>
         <p className="mt-6 max-w-[52ch] text-xl text-slate">
-          Projects where we built the store, set up search and sorted out
-          measurement.
+          Projects where we built the site or store, set up search and sorted
+          out measurement.
         </p>
       </section>
       <section className="wrap pb-20">

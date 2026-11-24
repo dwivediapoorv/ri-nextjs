@@ -51,7 +51,10 @@ export default async function CasePage(props: PageProps<"/work/[slug]">) {
         )}
       </section>
 
-      <section aria-label="Project facts" className="border-t border-line bg-wash">
+      <section
+        aria-label="Project facts"
+        className="border-t border-line bg-wash"
+      >
         <dl className="wrap grid gap-8 py-10 sm:grid-cols-2 lg:grid-cols-4">
           {c.facts.map((f) => (
             <div key={f.label}>
@@ -79,7 +82,10 @@ export default async function CasePage(props: PageProps<"/work/[slug]">) {
                   <ul className="space-y-3 md:col-span-9">
                     {s.items.map((i) => (
                       <li key={i} className="flex max-w-[64ch] gap-3">
-                        <span aria-hidden className="mt-[0.7rem] h-1.5 w-3 flex-none bg-ink" />
+                        <span
+                          aria-hidden
+                          className="mt-[0.7rem] h-1.5 w-3 flex-none bg-ink"
+                        />
                         <span>{i}</span>
                       </li>
                     ))}
@@ -91,31 +97,36 @@ export default async function CasePage(props: PageProps<"/work/[slug]">) {
         </div>
       </section>
 
-      <section aria-labelledby="problem-h" className="border-t border-line bg-wash">
-        <div className="wrap grid gap-8 py-16 lg:grid-cols-12">
-          <h2 id="problem-h" className="display h-section lg:col-span-5">
-            {c.problem.title}
-          </h2>
-          <div className="space-y-4 lg:col-span-7">
-            {c.problem.body.map((p) => (
-              <p key={p} className="max-w-[62ch]">
-                {p}
-              </p>
-            ))}
+      {c.problem && (
+        <section
+          aria-labelledby="problem-h"
+          className="border-t border-line bg-wash"
+        >
+          <div className="wrap grid gap-8 py-16 lg:grid-cols-12">
+            <h2 id="problem-h" className="display h-section lg:col-span-5">
+              {c.problem.title}
+            </h2>
+            <div className="space-y-4 lg:col-span-7">
+              {c.problem.body.map((p) => (
+                <p key={p} className="max-w-[62ch]">
+                  {p}
+                </p>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       <section className="on-ink bg-ink text-paper">
         <div className="wrap flex flex-wrap items-center justify-between gap-6 py-14">
           <h2 className="display text-3xl sm:text-4xl">
-            Have a store like this?
+            {c.cta?.heading ?? "Have a store like this?"}
           </h2>
           <Link
-            href="/contact"
+            href={c.cta?.href ?? "/contact"}
             className="rounded-xl bg-paper px-6 py-4 text-lg font-semibold text-ink hover:bg-wash"
           >
-            Request free audit
+            {c.cta?.label ?? "Request free audit"}
           </Link>
         </div>
       </section>

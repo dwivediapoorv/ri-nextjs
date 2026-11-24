@@ -9,7 +9,8 @@ export type CaseStudy = {
   facts: { label: string; value: string }[];
   brief: string;
   sections: { pillar: PillarId; items: string[] }[];
-  problem: { title: string; body: string[] };
+  problem?: { title: string; body: string[] };
+  cta?: { heading: string; label: string; href: string };
 };
 
 export const cases: CaseStudy[] = [
@@ -60,6 +61,35 @@ export const cases: CaseStudy[] = [
         "The store uses Fastrr checkout through Shiprocket instead of Shopify’s own checkout. That is a sensible choice for shipping and payments in India, but it stops the standard Meta pixel from seeing the Purchase event. Without that event, Meta cannot tell which ads lead to sales.",
         "The approach is to send purchases to Meta from the server through the Conversions API, set up inside Shiprocket with the pixel ID and an access token from Events Manager. We mapped the three ways to get that token, depending on who owns the Meta business account, so the setup does not stall on permissions.",
       ],
+    },
+  },
+  {
+    slug: "uporthocon-2025",
+    client: "Ghaziabad Orthopaedic Association",
+    title: "A website and registration portal for UPORTHOCON 2025",
+    summary:
+      "Conference website, registration portal and payment gateway integration for the Uttar Pradesh Orthopaedic Association's annual conference, hosted in Ghaziabad.",
+    facts: [
+      { label: "Client", value: "Ghaziabad Orthopaedic Association, organiser of the 2025 conference" },
+      { label: "Event", value: "UPORTHOCON 2025, the annual conference of the Uttar Pradesh Orthopaedic Association, in Ghaziabad" },
+      { label: "Scope", value: "Website, registration portal, payment gateway integration" },
+    ],
+    brief:
+      "UPORTHOCON is the annual conference of the Uttar Pradesh Orthopaedic Association. The 2025 edition was hosted in Ghaziabad by the Ghaziabad Orthopaedic Association. We built the conference website, the portal where attendees register, and the payment gateway integration that takes registration payments online.",
+    sections: [
+      {
+        pillar: "build",
+        items: [
+          "Built the conference website for UPORTHOCON 2025.",
+          "Built the registration portal where attendees sign up for the conference.",
+          "Integrated a payment gateway so registration payments are made online.",
+        ],
+      },
+    ],
+    cta: {
+      heading: "Planning a conference or event?",
+      label: "Contact Sales",
+      href: "/contact?service=other",
     },
   },
 ];
