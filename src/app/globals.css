@@ -57,7 +57,8 @@ body {
 }
 
 .h-hero {
-  font-size: clamp(2.5rem, 6.2vw, 4.75rem);
+  font-size: clamp(2.25rem, 4.6vw, 3.75rem);
+  text-wrap: balance;
   line-height: 0.98;
 }
 
