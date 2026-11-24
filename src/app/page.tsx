@@ -89,7 +89,7 @@ export default function Home() {
 
         <aside
           aria-labelledby="audit-covers"
-          className="self-end border-l-2 border-ink pl-6 lg:col-span-5 lg:pl-8"
+          className="border-l-2 border-ink pl-6 lg:col-span-5 lg:pl-8"
         >
           <h2 id="audit-covers" className="display text-2xl">
             What the audit looks for
