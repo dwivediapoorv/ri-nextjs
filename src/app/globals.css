@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+@theme {
+  --color-paper: #f3f4fa;
+  --color-ink: #11132b;
+  --color-ultra: #3338e8;
+  --color-mark: #eef24b;
+  --color-slate: #586080;
+  --color-line: #d3d6e8;
+  --color-wash: #e7e9f6;
+
+  --font-display: "Bricolage Grotesque Variable", ui-sans-serif, system-ui,
+    sans-serif;
+  --font-sans: "Instrument Sans Variable", ui-sans-serif, system-ui, sans-serif;
+}
+
+html {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--color-mark);
+  color: var(--color-ink);
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-ultra);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.on-ink :focus-visible {
+  outline-color: var(--color-mark);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+.display {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+
+.h-hero {
+  font-size: clamp(2.5rem, 6.2vw, 4.75rem);
+  line-height: 0.98;
+}
+
+.h-section {
+  font-size: clamp(2rem, 4.2vw, 3.25rem);
+  line-height: 1.04;
+}
+
+.wrap {
+  width: 100%;
+  max-width: 75rem;
+  margin-inline: auto;
+  padding-inline: clamp(1.25rem, 4vw, 2.5rem);
+}
+
+details > summary {
+  list-style: none;
+}
+details > summary::-webkit-details-marker {
+  display: none;
+}
+details[open] > summary .plus {
+  transform: rotate(45deg);
+}
