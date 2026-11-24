@@ -162,3 +162,27 @@ details[open] > summary .plus {
     animation: none;
   }
 }
+
+/* Accordions: slow, smooth open and close (browsers without support open instantly) */
+:root {
+  interpolate-size: allow-keywords;
+}
+details::details-content {
+  block-size: 0;
+  overflow: clip;
+  transition:
+    block-size 0.45s ease,
+    content-visibility 0.45s allow-discrete;
+}
+details[open]::details-content {
+  block-size: auto;
+}
+details > summary .plus {
+  transition-duration: 0.45s;
+}
+@media (prefers-reduced-motion: reduce) {
+  details::details-content,
+  details > summary .plus {
+    transition: none;
+  }
+}
