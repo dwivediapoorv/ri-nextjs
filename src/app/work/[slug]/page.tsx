@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { Breadcrumbs } from "@/components/breadcrumbs";
 import { pillarById } from "@/lib/services";
 import { caseBySlug, cases } from "@/lib/work";
 
@@ -29,13 +30,12 @@ export default async function CasePage(props: PageProps<"/work/[slug]">) {
   return (
     <>
       <section className="wrap pb-14 pt-14 sm:pt-20">
-        <nav aria-label="Breadcrumb" className="text-[0.95rem] text-slate">
-          <Link href="/work" className="underline underline-offset-4 hover:text-ultra">
-            Work
-          </Link>
-          <span aria-hidden> / </span>
-          <span>{c.client}</span>
-        </nav>
+        <Breadcrumbs
+          trail={[
+            { name: "Work", path: "/work" },
+            { name: c.client, path: `/work/${c.slug}` },
+          ]}
+        />
         <h1 className="display h-hero mt-5 max-w-[18ch]">{c.title}</h1>
         <p className="mt-6 max-w-[60ch] text-xl text-slate">{c.brief}</p>
         {c.url && (

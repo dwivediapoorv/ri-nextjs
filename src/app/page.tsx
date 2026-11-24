@@ -2,7 +2,6 @@ import Link from "next/link";
 import { AuditForm } from "@/components/audit-form";
 import { FaqList } from "@/components/faq";
 import { pillars, servicesInPillar, type Faq } from "@/lib/services";
-import { site } from "@/lib/site";
 
 const auditChecks = [
   "Product URLs duplicated through /collections/ paths",
@@ -66,33 +65,9 @@ const faqs: Faq[] = [
   },
 ];
 
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  name: site.name,
-  url: site.url,
-  email: site.email,
-  description: site.description,
-  serviceType: [
-    "Shopify store development",
-    "Shopify app development",
-    "Custom dashboards and internal tools",
-    "On-page SEO",
-    "Technical SEO",
-    "E-commerce marketing",
-  ],
-};
-
 export default function Home() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c"),
-        }}
-      />
-
       {/* Hero */}
       <section className="wrap grid gap-14 pb-20 pt-14 sm:pt-20 lg:grid-cols-12 lg:gap-10">
         <div className="lg:col-span-7">

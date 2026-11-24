@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { Breadcrumbs } from "@/components/breadcrumbs";
 import { FaqList } from "@/components/faq";
+import { JsonLd } from "@/components/json-ld";
 import {
   pillarById,
   serviceBySlug,
@@ -40,26 +42,21 @@ export default async function ServicePage(props: PageProps<"/services/[slug]">) 
     "@type": "Service",
     name: s.name,
     description: s.summary,
-    provider: { "@type": "ProfessionalService", name: site.name, url: site.url },
+    provider: { "@id": `${site.url}/#organization` },
+    url: `${site.url}/services/${s.slug}`,
   };
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c"),
-        }}
-      />
+      <JsonLd data={jsonLd} />
 
       <section className="wrap pb-14 pt-14 sm:pt-20">
-        <nav aria-label="Breadcrumb" className="text-[0.95rem] text-slate">
-          <Link href="/services" className="underline underline-offset-4 hover:text-ultra">
-            Services
-          </Link>
-          <span aria-hidden> / </span>
-          <span>{pillar.name}</span>
-        </nav>
+        <Breadcrumbs
+          trail={[
+            { name: "Services", path: "/services" },
+            { name: s.name, path: `/services/${s.slug}` },
+          ]}
+        />
         <h1 className="display h-hero mt-5 max-w-[16ch]">{s.name}</h1>
         <p className="display mt-6 max-w-[28ch] text-2xl leading-tight text-ultra sm:text-3xl">
           {s.tagline}

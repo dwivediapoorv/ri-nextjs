@@ -2,6 +2,9 @@ export const site = {
   name: "Rare Input",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://rareinput.com",
   email: "hello@rareinput.com",
+  logo: "/logo.svg",
+  /** Public profiles (LinkedIn, Instagram, X, GitHub...). Used for structured data. */
+  sameAs: [] as string[],
   description:
     "Rare Input builds Shopify stores and apps, and runs the on-page SEO, technical SEO and e-commerce marketing that brings buyers to them.",
 };
