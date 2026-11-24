@@ -6,7 +6,7 @@ import { site } from "@/lib/site";
 export function Footer() {
   return (
     <footer className="on-ink bg-ink text-paper">
-      <div className="wrap grid gap-12 py-16 md:grid-cols-12">
+      <div className="wrap grid gap-10 py-14 md:grid-cols-12 md:gap-12 md:py-16">
         <div className="md:col-span-4">
           <Wordmark className="text-paper" />
           <p className="mt-4 max-w-xs text-paper/70">
@@ -19,7 +19,37 @@ export function Footer() {
             {site.email}
           </a>
         </div>
-        <div className="grid gap-8 sm:grid-cols-3 md:col-span-8">
+        {/* Phone: collapsible groups */}
+        <div className="border-t border-paper/15 md:hidden">
+          {pillars.map((p) => (
+            <details key={p.id} className="border-b border-paper/15">
+              <summary className="flex cursor-pointer items-center justify-between rounded-md py-4">
+                <span className="display text-xl">{p.name}</span>
+                <span
+                  aria-hidden
+                  className="plus text-2xl leading-none text-paper/70 transition-transform motion-reduce:transition-none"
+                >
+                  +
+                </span>
+              </summary>
+              <ul className="space-y-3 pb-5">
+                {servicesInPillar(p.id).map((s) => (
+                  <li key={s.slug}>
+                    <Link
+                      href={`/services/${s.slug}`}
+                      className="text-paper/70 hover:text-mark"
+                    >
+                      {s.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </details>
+          ))}
+        </div>
+
+        {/* Tablet and desktop: always open */}
+        <div className="hidden gap-8 md:col-span-8 md:grid md:grid-cols-3">
           {pillars.map((p) => (
             <div key={p.id}>
               <h2 className="display text-lg">{p.name}</h2>
