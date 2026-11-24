@@ -32,13 +32,14 @@ body {
   color: var(--color-ink);
 }
 
-:focus-visible {
+/* Text fields show focus through their own border and tint instead. */
+:focus-visible:not(input, textarea, select) {
   outline: 3px solid var(--color-ultra);
   outline-offset: 3px;
   border-radius: 4px;
 }
 
-.on-ink :focus-visible {
+.on-ink :focus-visible:not(input, textarea, select) {
   outline-color: var(--color-mark);
 }
 

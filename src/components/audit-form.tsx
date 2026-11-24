@@ -8,7 +8,7 @@ export function AuditForm({ id = "store" }: { id?: string }) {
         Your store URL
       </label>
       <div className="flex flex-col gap-3 sm:flex-row">
-        <div className="flex flex-1 items-center rounded-xl border-2 border-ink bg-white pl-4 shadow-[6px_6px_0_0_var(--color-ultra)] focus-within:bg-mark/40">
+        <div className="flex flex-1 items-center rounded-xl border-2 border-ink bg-white pl-4 shadow-[6px_6px_0_0_var(--color-ultra)] focus-within:border-ultra focus-within:bg-mark/40">
           <span aria-hidden className="select-none text-slate">
             https://
           </span>

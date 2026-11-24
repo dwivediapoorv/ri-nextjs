@@ -10,7 +10,7 @@ type Status =
   | { state: "error"; message: string };
 
 const field =
-  "w-full rounded-xl border-2 border-ink bg-white px-4 py-3 text-lg placeholder:text-slate/60 focus:bg-mark/40 focus:outline-none";
+  "w-full rounded-xl border-2 border-ink bg-white px-4 py-3 text-lg placeholder:text-slate/60 focus:border-ultra focus:bg-mark/40 focus:outline-none";
 
 export function ContactForm({
   defaultStore = "",
