@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -48,6 +49,14 @@ export default function AboutPage() {
             <h2 id="founder-h" className="display h-section">
               Who runs Rare Input
             </h2>
+            <Image
+              src="/founder.webp"
+              alt="Apoorv Dwivedi"
+              width={640}
+              height={640}
+              sizes="(min-width: 1024px) 208px, 160px"
+              className="mt-6 h-40 w-40 rounded-2xl object-cover lg:h-52 lg:w-52"
+            />
             <p className="display mt-6 text-2xl">Apoorv Dwivedi</p>
             <p className="mt-1 text-slate">Founder, Rare Input</p>
             <p className="text-slate">Noida, India</p>

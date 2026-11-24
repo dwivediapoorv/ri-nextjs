@@ -19,7 +19,7 @@ Open tasks for the Rare Input website. Tick them off as they are done.
 
 ## Later
 
-- [ ] **Founder photo**, when there is one. The About page works without it.
+- [ ] **Better founder photo (optional).** The current one is a night street shot, cropped to head and shoulders. Replace `public/founder.webp` (square, at least 640 x 640) with a cleaner version.
 - [ ] **Visible social links.** LinkedIn, Facebook and Instagram are in the structured data only. Add footer links, starting with LinkedIn, once the profiles have content.
 - [ ] **Second case study**, and real testimonials once there are some.
 - [ ] **Blog**, to put the content SEO service into practice.

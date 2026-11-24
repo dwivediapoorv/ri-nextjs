@@ -36,6 +36,7 @@ const organization = {
     "@type": "Person",
     name: "Apoorv Dwivedi",
     jobTitle: "Founder",
+    image: `${site.url}/founder.webp`,
     sameAs: ["https://www.linkedin.com/in/dwivediapoorv/"],
   },
   areaServed: "Worldwide",
