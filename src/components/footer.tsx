@@ -22,7 +22,7 @@ export function Footer() {
         {/* Phone: collapsible groups */}
         <div className="border-t border-paper/15 md:hidden">
           {pillars.map((p) => (
-            <details key={p.id} className="border-b border-paper/15">
+            <details key={p.id} name="footer-services" className="border-b border-paper/15">
               <summary className="flex cursor-pointer items-center justify-between rounded-md py-4">
                 <span className="display text-xl">{p.name}</span>
                 <span

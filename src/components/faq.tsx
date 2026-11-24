@@ -4,7 +4,7 @@ export function FaqList({ items }: { items: Faq[] }) {
   return (
     <div className="divide-y divide-line border-y border-line">
       {items.map((f) => (
-        <details key={f.q} className="group py-5">
+        <details key={f.q} name="faq" className="group py-5">
           <summary className="flex cursor-pointer items-start justify-between gap-6 rounded-md">
             <span className="display text-xl leading-snug sm:text-2xl">{f.q}</span>
             <span
