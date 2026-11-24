@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, type CSSProperties } from "react";
 
 type Item = { href: string; label: string };
 
@@ -86,8 +86,12 @@ export function MobileMenu({ items }: { items: Item[] }) {
           </div>
           <nav aria-label="Menu" className="mt-4 flex-1">
             <ul>
-              {items.map((n) => (
-                <li key={n.href} className="border-b border-line">
+              {items.map((n, i) => (
+                <li
+                  key={n.href}
+                  className="drawer-item border-b border-line"
+                  style={{ "--i": i } as CSSProperties}
+                >
                   <Link
                     href={n.href}
                     onClick={hide}
@@ -102,7 +106,8 @@ export function MobileMenu({ items }: { items: Item[] }) {
           <Link
             href="/contact?service=other"
             onClick={hide}
-            className="mb-2 block rounded-xl bg-ink px-6 py-4 text-center text-lg font-semibold text-paper hover:bg-ultra"
+            style={{ "--i": items.length } as CSSProperties}
+            className="drawer-item mb-2 block rounded-xl bg-ink px-6 py-4 text-center text-lg font-semibold text-paper hover:bg-ultra"
           >
             Contact Sales
           </Link>

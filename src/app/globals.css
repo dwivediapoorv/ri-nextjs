@@ -113,6 +113,26 @@ details[open] > summary .plus {
 .drawer[data-closing]::backdrop {
   animation: backdrop-out 0.3s ease-in forwards;
 }
+.drawer[open] .drawer-item {
+  animation: item-in 0.35s ease-out both;
+  animation-delay: calc(0.1s + var(--i, 0) * 0.06s);
+}
+.drawer[data-closing] .drawer-item {
+  animation: item-out 0.2s ease-in forwards;
+  animation-delay: 0s;
+}
+@keyframes item-in {
+  from {
+    opacity: 0;
+    transform: translateX(1.5rem);
+  }
+}
+@keyframes item-out {
+  to {
+    opacity: 0;
+    transform: translateX(1.5rem);
+  }
+}
 @keyframes drawer-out {
   to {
     transform: translateX(100%);
@@ -135,7 +155,8 @@ details[open] > summary .plus {
 }
 @media (prefers-reduced-motion: reduce) {
   .drawer[open],
-  .drawer[open]::backdrop {
+  .drawer[open]::backdrop,
+  .drawer[open] .drawer-item {
     animation: none;
   }
 }
