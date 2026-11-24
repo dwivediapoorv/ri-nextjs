@@ -7,6 +7,7 @@ export const site = {
   sameAs: [
     "https://www.linkedin.com/company/rareinput/",
     "https://www.facebook.com/rareinput",
+    "https://www.instagram.com/rareinput.io",
   ] as string[],
   description:
     "Rare Input builds Shopify stores and apps, and runs the on-page SEO, technical SEO and e-commerce marketing that brings buyers to them.",
