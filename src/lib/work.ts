@@ -24,7 +24,7 @@ export const cases: CaseStudy[] = [
     facts: [
       { label: "Client", value: "Clean & Conscious Care, with founder Charu Varshney" },
       { label: "Platform", value: "Shopify, with Fastrr checkout through Shiprocket" },
-      { label: "Catalog", value: "31 products in four categories, plus bundles" },
+      { label: "Timeline", value: "Live in 30 days, from creating the products to a custom-built theme" },
       { label: "Scope", value: "Store build, SEO, Meta advertising, tracking" },
     ],
     brief:
@@ -33,7 +33,7 @@ export const cases: CaseStudy[] = [
       {
         pillar: "build",
         items: [
-          "Built a custom Shopify theme for a catalog of 31 products across hair care, body care, face and lip care, and personal care.",
+          "Created the product catalog and built a custom Shopify theme to Charu’s requirements, taking the whole store live in 30 days. The catalog has 31 products across hair care, body care, face and lip care, and personal care.",
           "Set up a bundles collection and worked out what a “set of any three” soap bundle needs. Shopify’s own bundles only handle fixed sets, so a third-party app has to be chosen and tested against checkout, shipping and stock counts.",
         ],
       },
