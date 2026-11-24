@@ -23,29 +23,25 @@ export function Header() {
         <Link href="/" className="rounded-md">
           <Wordmark />
         </Link>
-        <nav aria-label="Main" className="flex items-center gap-5 sm:gap-8">
+        <nav aria-label="Main" className="flex items-center gap-4 sm:gap-8">
           {nav
             .filter((n) => n.href !== "/contact")
             .map((n) => (
               <Link
                 key={n.href}
                 href={n.href}
-                className="text-[0.95rem] font-medium text-ink hover:text-ultra"
+                className={`text-[0.95rem] font-medium text-ink hover:text-ultra ${
+                  n.href === "/about" ? "hidden sm:inline" : ""
+                }`}
               >
                 {n.label}
               </Link>
             ))}
           <Link
             href="/contact?service=other"
-            className="hidden rounded-lg border-2 border-ink px-4 py-[0.4rem] text-[0.95rem] font-semibold text-ink hover:border-ultra hover:text-ultra md:inline-block"
+            className="whitespace-nowrap rounded-lg bg-ink px-4 py-2 text-[0.95rem] font-semibold text-paper hover:bg-ultra"
           >
             Contact sales
-          </Link>
-          <Link
-            href="/contact"
-            className="rounded-lg bg-ink px-4 py-2 text-[0.95rem] font-semibold text-paper hover:bg-ultra"
-          >
-            Free audit
           </Link>
         </nav>
       </div>
