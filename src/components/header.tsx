@@ -41,7 +41,7 @@ export function Header() {
         <div className="flex items-center gap-2 justify-self-end">
           <Link
             href="/contact?service=other"
-            className="whitespace-nowrap rounded-lg bg-ink px-4 py-2 text-[0.95rem] font-semibold text-paper hover:bg-ultra"
+            className="hidden whitespace-nowrap rounded-lg bg-ink px-4 py-2 text-[0.95rem] font-semibold text-paper hover:bg-ultra sm:inline-block"
           >
             Contact Sales
           </Link>
