@@ -1,0 +1,67 @@
+import type { PillarId } from "./services";
+
+export type CaseStudy = {
+  slug: string;
+  client: string;
+  title: string;
+  summary: string;
+  url?: string;
+  facts: { label: string; value: string }[];
+  brief: string;
+  sections: { pillar: PillarId; items: string[] }[];
+  problem: { title: string; body: string[] };
+};
+
+export const cases: CaseStudy[] = [
+  {
+    slug: "clean-and-conscious-care",
+    client: "Clean & Conscious Care",
+    title: "A Shopify store for a small-batch personal care brand",
+    summary:
+      "Store build, search groundwork, ad strategy and tracking for a handmade personal care brand with 31 products.",
+    url: "https://cleanandconsciouscare.com",
+    facts: [
+      { label: "Client", value: "Clean & Conscious Care, with founder Charu Varshney" },
+      { label: "Platform", value: "Shopify, with Fastrr checkout through Shiprocket" },
+      { label: "Catalog", value: "31 products in four categories, plus bundles" },
+      { label: "Scope", value: "Store build, SEO, Meta advertising, tracking" },
+    ],
+    brief:
+      "Clean & Conscious Care makes natural personal care products in small batches: infused oils, essential oils and no synthetic fragrance. Charu handles making, packing and shipping. We took on everything digital: the store, how it shows up in search, how it is advertised, and how sales are measured.",
+    sections: [
+      {
+        pillar: "build",
+        items: [
+          "Built a custom Shopify theme for a catalog of 31 products across hair care, body care, face and lip care, and personal care.",
+          "Set up a bundles collection and worked out what a “set of any three” soap bundle needs. Shopify’s own bundles only handle fixed sets, so a third-party app has to be chosen and tested against checkout, shipping and stock counts.",
+        ],
+      },
+      {
+        pillar: "rank",
+        items: [
+          "Researched keywords in SEMrush and mapped them to specific collection and product URLs.",
+          "Drafted meta titles and descriptions for the products.",
+          "Planned breadcrumb markup for product and collection templates, and review markup for launch.",
+        ],
+      },
+      {
+        pillar: "grow",
+        items: [
+          "Set the Meta advertising plan: hair oils first for cold audiences, one Sales campaign with a broad ad set.",
+          "Produced an ad creative library and video scripts for the hair elixirs.",
+          "Reviewed homepage and product copy against Meta’s commerce policies and rewrote risky claims in plain cosmetic language.",
+          "Verified the business for WhatsApp Business so customer messaging can run from the brand’s own account.",
+        ],
+      },
+    ],
+    problem: {
+      title: "When the checkout hides your purchases from Meta",
+      body: [
+        "The store uses Fastrr checkout through Shiprocket instead of Shopify’s own checkout. That is a sensible choice for shipping and payments in India, but it stops the standard Meta pixel from seeing the Purchase event. Without that event, Meta cannot tell which ads lead to sales.",
+        "The approach is to send purchases to Meta from the server through the Conversions API, set up inside Shiprocket with the pixel ID and an access token from Events Manager. We mapped the three ways to get that token, depending on who owns the Meta business account, so the setup does not stall on permissions.",
+      ],
+    },
+  },
+];
+
+export const caseBySlug = (slug: string) => cases.find((c) => c.slug === slug);
