@@ -18,7 +18,7 @@ export function Wordmark({ className = "" }: { className?: string }) {
 
 export function Header() {
   return (
-    <header className="border-b border-line">
+    <header className="sticky top-0 z-40 border-b border-line bg-paper/90 backdrop-blur supports-[backdrop-filter]:bg-paper/80">
       <div className="wrap flex flex-wrap items-center justify-between gap-x-6 gap-y-3 py-4">
         <Link href="/" className="rounded-md">
           <Wordmark />
