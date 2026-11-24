@@ -45,7 +45,8 @@ export default async function CasePage(props: PageProps<"/work/[slug]">) {
             rel="noopener noreferrer"
             className="mt-6 inline-block font-semibold text-ultra underline underline-offset-4 hover:text-ink"
           >
-            Visit {c.client} (opens in a new tab)
+            Visit {c.client}
+            <span className="sr-only"> (opens in a new tab)</span>
           </a>
         )}
       </section>
