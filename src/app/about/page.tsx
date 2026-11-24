@@ -49,23 +49,22 @@ export default function AboutPage() {
               Who runs Rare Input
             </h2>
             <p className="display mt-6 text-2xl">Apoorv Dwivedi</p>
-            <p className="mt-1 text-slate">
-              Founder. Shopify developer and digital marketer.
-            </p>
+            <p className="mt-1 text-slate">Founder, Rare Input</p>
             <p className="text-slate">Noida, India</p>
           </div>
           <div className="lg:col-span-8">
             <div className="max-w-[62ch] space-y-4">
               <p>
-                Apoorv is a developer by training who moved into marketing,
-                which is why Rare Input builds a store and fixes its search in
-                the same team.
+                Apoorv leads development and marketing at Rare Input. He
+                trained as a developer and moved into marketing, so he can find
+                why a store is not ranking and fix it in the theme code
+                himself.
               </p>
               <p>
-                He focuses on Shopify: custom themes on Online Store 2.0,
+                His work centres on Shopify: custom Online Store 2.0 themes,
                 technical and on-page SEO, Google Ads, and the apps and
-                dashboards that sit around a store. He also teaches practical,
-                job-ready skills to students and teams.
+                dashboards built around a store. Alongside client work, he
+                teaches practical, job-ready skills to students and teams.
               </p>
             </div>
             <p className="mt-6">
