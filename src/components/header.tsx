@@ -4,10 +4,10 @@ import { nav } from "@/lib/site";
 export function Wordmark({ className = "" }: { className?: string }) {
   return (
     <span
-      className={`display inline-flex items-center text-xl ${className}`}
+      className={`display inline-flex items-center text-3xl ${className}`}
       aria-label="Rare Input"
     >
-      rare input
+      ri
       <span
         aria-hidden
         className="ml-1 inline-block h-[1.05em] w-[0.5em] translate-y-[1px] bg-ultra"
