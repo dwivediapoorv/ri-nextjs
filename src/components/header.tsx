@@ -10,7 +10,7 @@ export function Wordmark({ className = "" }: { className?: string }) {
       rare input
       <span
         aria-hidden
-        className="ml-1 inline-block h-[1.05em] w-[0.5em] translate-y-[1px] bg-mark outline outline-1 outline-ink/20"
+        className="ml-1 inline-block h-[1.05em] w-[0.5em] translate-y-[1px] bg-ultra"
       />
     </span>
   );
