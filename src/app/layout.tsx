@@ -32,6 +32,7 @@ const organization = {
   image: `${site.url}${site.logo}`,
   email: site.email,
   description: site.description,
+  founder: { "@type": "Person", name: "Apoorv Dwivedi" },
   areaServed: "Worldwide",
   serviceType: [
     "Shopify store development",

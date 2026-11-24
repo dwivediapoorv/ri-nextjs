@@ -42,6 +42,48 @@ export default function AboutPage() {
         </p>
       </section>
 
+      <section aria-labelledby="founder-h" className="border-t border-line">
+        <div className="wrap grid gap-10 py-16 lg:grid-cols-12">
+          <div className="lg:col-span-4">
+            <h2 id="founder-h" className="display h-section">
+              Who runs Rare Input
+            </h2>
+            <p className="display mt-6 text-2xl">Apoorv Dwivedi</p>
+            <p className="mt-1 text-slate">
+              Founder. Shopify developer and digital marketer.
+            </p>
+          </div>
+          <div className="lg:col-span-8">
+            <div className="max-w-[62ch] space-y-4">
+              <p>
+                Apoorv is a developer by training who moved into marketing,
+                which is why Rare Input builds a store and fixes its search in
+                the same team.
+              </p>
+              <p>
+                He focuses on Shopify: custom themes on Online Store 2.0,
+                technical and on-page SEO, Google Ads, and the apps and
+                dashboards that sit around a store. He also teaches practical,
+                job-ready skills to students and teams.
+              </p>
+            </div>
+            <dl className="mt-10 max-w-[62ch] divide-y divide-line border-y border-line">
+              {[
+                ["2012", "Co-founder, Softcrayons Tech Solutions"],
+                ["2013 to 2015", "Software engineer, HCL Technologies"],
+                ["2015 to 2023", "Independent consultant"],
+                ["2023", "Consulting CTO, DigiRocket Technologies"],
+              ].map(([when, what]) => (
+                <div key={when} className="grid grid-cols-[8rem_1fr] gap-4 py-3">
+                  <dt className="display text-lg">{when}</dt>
+                  <dd className="text-slate">{what}</dd>
+                </div>
+              ))}
+            </dl>
+          </div>
+        </div>
+      </section>
+
       <section aria-labelledby="principles-h" className="border-t border-line bg-wash">
         <div className="wrap py-16">
           <h2 id="principles-h" className="display h-section">

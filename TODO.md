@@ -14,7 +14,7 @@ Open tasks for the Rare Input website. Tick them off as they are done.
 ## Soon
 
 - [ ] **Social preview image.** Links shared on LinkedIn, WhatsApp and Facebook show no image. Needs an image (1200 x 630) and the Open Graph and Twitter card tags.
-- [ ] **About page: a real person.** Add the founder's name, photo and a short bio.
+- [ ] **Founder photo.** The About page has the bio but no photo yet. Also decide whether to link a personal LinkedIn, and which location to show (the bio leaves it out).
 - [ ] **WhatsApp button.** Add a chat button, with the number to use.
 - [ ] **Case study results.** Add real numbers to the Clean & Conscious Care page if there are any (pages indexed, rankings, orders). Also confirm whether the store has launched, whether the Conversions API is now working, and that Charu is happy with how the Meta policy work is described.
 
@@ -33,4 +33,5 @@ Open tasks for the Rare Input website. Tick them off as they are done.
 - [x] Breadcrumb and organization structured data (LinkedIn, Facebook, Instagram)
 - [x] Logo and favicon
 - [x] Branded 404 page
+- [x] Founder bio on the About page
 - [x] Sitemap and robots file
