@@ -61,10 +61,9 @@ export default function AboutPage() {
                 himself.
               </p>
               <p>
-                His work centres on Shopify: custom Online Store 2.0 themes,
-                technical and on-page SEO, Google Ads, and the apps and
-                dashboards built around a store. Alongside client work, he
-                teaches practical, job-ready skills to students and teams.
+                His work centers on Shopify. Alongside client work, he builds
+                apps, dashboards and AI agents, and delivers corporate training
+                for teams.
               </p>
             </div>
             <p className="mt-6">
