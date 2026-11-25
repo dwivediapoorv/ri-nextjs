@@ -85,6 +85,10 @@ export function Footer() {
               About
             </Link>{" "}
             &nbsp;&nbsp;
+            <Link href="/careers" className="hover:text-mark">
+              Careers
+            </Link>{" "}
+            &nbsp;&nbsp;
             <Link href="/contact" className="hover:text-mark">
               Contact
             </Link>
