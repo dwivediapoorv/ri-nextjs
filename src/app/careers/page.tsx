@@ -24,6 +24,14 @@ const reasons = [
     body: "You work directly with the people who run the studio, and feedback is quick.",
   },
   {
+    title: "Flexible working hours",
+    body: "We care about the work getting done well, and you have room to arrange your day around it.",
+  },
+  {
+    title: "Remote or in office",
+    body: "Both options are available, so you can work from where you do your best work.",
+  },
+  {
     title: "Clear briefs, plain language",
     body: "We write down what a job needs and why, and say it simply.",
   },
