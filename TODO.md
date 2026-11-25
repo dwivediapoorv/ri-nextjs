@@ -10,6 +10,8 @@ Open tasks for the Rare Input website. Tick them off as they are done.
 - [ ] **Analytics and Search Console.** Add Google Analytics 4 (needs the measurement ID), verify the site in Search Console, and track contact form submissions as a conversion.
 - [ ] **Privacy policy.** The contact form collects names and emails. Draft a policy page and link it in the footer. Have it checked by a lawyer.
 - [ ] **Careers page.** The "Why work with us" points are draft wording: check each one is true of the studio, and change what is not. The resume form uses the same email settings as the contact form, so it works once `RESEND_API_KEY` and `CONTACT_FROM_EMAIL` are set. Optional: `CAREERS_TO_EMAIL` to send applications to a different inbox. Resumes hold personal data, so mention them in the privacy policy.
+- [ ] **Careers: team quotes.** The page has a "From the team" section that stays hidden until quotes are added (`quotes` in `src/app/careers/page.tsx`). Needs one or two real quotes, with name and role. Also confirm the "we only hire through this page and LinkedIn, and never ask for money" line, and decide whether to add a line for interns or freshers.
+- [ ] **Careers: sign-up list.** The "Not ready to apply?" form emails each address to the careers inbox. There is no list or tool behind it yet, so keep the addresses somewhere and use them when roles open.
 - [ ] **Read the draft copy.** These lines are placeholder wording: the pricing answer on the home page FAQ, "usually within two working days" on the contact form, and the "Who we are not for" list on the About page.
 
 ## Soon

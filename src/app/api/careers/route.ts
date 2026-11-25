@@ -18,6 +18,42 @@ export async function POST(request: Request) {
   // Honeypot: pretend success so bots do not retry.
   if (clean(form.get("website"), 200)) return NextResponse.json({ ok: true });
 
+  const apiKey = process.env.RESEND_API_KEY;
+  const from = process.env.CONTACT_FROM_EMAIL;
+  const to =
+    process.env.CAREERS_TO_EMAIL ?? process.env.CONTACT_TO_EMAIL ?? site.email;
+
+  // Talent community sign-up: just an email address, no resume.
+  if (clean(form.get("kind"), 20) === "signup") {
+    const signupEmail = clean(form.get("email"), 200);
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(signupEmail)) {
+      return NextResponse.json({ error: "Enter a valid email address." }, { status: 400 });
+    }
+    if (!apiKey || !from) {
+      console.error("Careers form is not configured: set RESEND_API_KEY and CONTACT_FROM_EMAIL.");
+      return NextResponse.json(
+        { error: `The form is not connected yet. Email us at ${site.email}.` },
+        { status: 503 },
+      );
+    }
+    const r = await fetch("https://api.resend.com/emails", {
+      method: "POST",
+      headers: { Authorization: `Bearer ${apiKey}`, "Content-Type": "application/json" },
+      body: JSON.stringify({
+        from,
+        to,
+        reply_to: signupEmail,
+        subject: "Talent community sign-up",
+        text: `Email: ${signupEmail}\n\nAsked to be told when roles open.`,
+      }),
+    });
+    if (!r.ok) {
+      console.error("Resend error", r.status, await r.text());
+      return NextResponse.json({ error: "The sign-up was not sent. Try again." }, { status: 502 });
+    }
+    return NextResponse.json({ ok: true });
+  }
+
   const name = clean(form.get("name"), 120);
   const email = clean(form.get("email"), 200);
   const role = clean(form.get("role"), 120);
@@ -47,11 +83,6 @@ export async function POST(request: Request) {
       { status: 400 },
     );
   }
-
-  const apiKey = process.env.RESEND_API_KEY;
-  const from = process.env.CONTACT_FROM_EMAIL;
-  const to =
-    process.env.CAREERS_TO_EMAIL ?? process.env.CONTACT_TO_EMAIL ?? site.email;
 
   if (!apiKey || !from) {
     console.error("Careers form is not configured: set RESEND_API_KEY and CONTACT_FROM_EMAIL.");
