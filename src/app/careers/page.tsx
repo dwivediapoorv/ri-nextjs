@@ -24,6 +24,15 @@ const reasons = [
   { title: "Performance bonus", body: "Bonuses tied to results, so strong work is recognised and rewarded in your pay." },
 ];
 
+const tones = [
+  "bg-pop text-ink",
+  "bg-mint text-ink",
+  "bg-mark text-ink",
+  "bg-ultra text-white",
+  "bg-pop text-ink",
+  "bg-mint text-ink",
+];
+
 const linkedin = site.sameAs.find((u) => u.includes("linkedin.com/company"));
 
 export default function CareersPage() {
@@ -60,14 +69,23 @@ export default function CareersPage() {
             Why work with us
           </h2>
           <ul className="mt-10 grid auto-rows-fr gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {reasons.map((b) => (
+            {reasons.map((b, i) => (
               <li
                 key={b.title}
-                className="card-pop rounded-2xl border-2 border-ink bg-paper p-6 shadow-[5px_5px_0_0_var(--color-ink)]"
+                tabIndex={0}
+                className="card-pop group relative overflow-hidden rounded-2xl border-2 border-ink bg-paper p-6 shadow-[5px_5px_0_0_var(--color-ink)]"
               >
-                <span aria-hidden className="block h-1.5 w-8 bg-ultra" />
-                <h3 className="display mt-5 text-xl leading-snug">{b.title}</h3>
+                <h3 className="display text-xl leading-snug">{b.title}</h3>
                 <p className="mt-2 text-slate">{b.body}</p>
+                <div
+                  aria-hidden
+                  className={`absolute inset-0 flex items-end justify-between p-6 transition-[clip-path] duration-500 ease-out [clip-path:inset(0)] group-hover:[clip-path:inset(0_0_100%_0)] group-focus:[clip-path:inset(0_0_100%_0)] motion-reduce:transition-none ${tones[i % tones.length]}`}
+                >
+                  <span className="display text-3xl leading-none">{b.title}</span>
+                  <span className="display flex h-8 w-8 flex-none items-center justify-center rounded-full border-2 border-current text-xl leading-none">
+                    +
+                  </span>
+                </div>
               </li>
             ))}
           </ul>

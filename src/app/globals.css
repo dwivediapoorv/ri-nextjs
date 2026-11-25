@@ -280,3 +280,7 @@ details > summary .plus {
 .drawer {
   border-left: 2px solid var(--color-ink);
 }
+
+.card-pop:focus-visible {
+  border-radius: 1rem;
+}
