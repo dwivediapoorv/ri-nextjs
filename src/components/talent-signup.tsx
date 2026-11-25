@@ -56,7 +56,7 @@ export function TalentSignup() {
         <button
           type="submit"
           disabled={status.state === "sending"}
-          className="whitespace-nowrap rounded-xl bg-ink px-6 py-3 text-lg font-semibold text-paper hover:bg-ultra disabled:opacity-60"
+          className="whitespace-nowrap rounded-full bg-ink px-6 py-3 text-lg font-semibold text-paper hover:bg-ultra disabled:opacity-60"
         >
           {status.state === "sending" ? "Sending…" : "Tell me when roles open"}
         </button>

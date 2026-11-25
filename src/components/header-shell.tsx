@@ -41,7 +41,7 @@ export function HeaderShell({ children }: { children: React.ReactNode }) {
   return (
     <header
       onFocusCapture={() => setHidden(false)}
-      className={`sticky top-0 z-40 border-b border-line bg-paper/90 backdrop-blur transition-transform duration-300 supports-[backdrop-filter]:bg-paper/80 motion-reduce:transition-none ${
+      className={`sticky top-0 z-40 border-b-2 border-ink bg-paper/90 backdrop-blur transition-transform duration-300 supports-[backdrop-filter]:bg-paper/80 motion-reduce:transition-none ${
         hidden ? "-translate-y-full" : "translate-y-0"
       }`}
     >

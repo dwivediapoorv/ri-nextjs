@@ -17,13 +17,13 @@ export default function NotFound() {
       <div className="mt-10 flex flex-wrap gap-3">
         <Link
           href="/"
-          className="rounded-xl bg-ultra px-6 py-4 text-lg font-semibold text-white shadow-[6px_6px_0_0_var(--color-ink)] hover:bg-ink"
+          className="rounded-full bg-ultra px-6 py-4 text-lg font-semibold text-white border-2 border-ink shadow-[6px_6px_0_0_var(--color-ink)] btn-pop hover:bg-ink"
         >
           Go to the home page
         </Link>
         <Link
           href="/contact"
-          className="rounded-xl border-2 border-ink px-6 py-[0.875rem] text-lg font-semibold hover:border-ultra hover:text-ultra"
+          className="rounded-full border-2 border-ink px-6 py-[0.875rem] text-lg font-semibold hover:border-ultra hover:text-ultra"
         >
           Contact us
         </Link>

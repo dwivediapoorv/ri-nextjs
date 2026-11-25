@@ -124,7 +124,7 @@ export default async function CasePage(props: PageProps<"/work/[slug]">) {
           </h2>
           <Link
             href={c.cta?.href ?? "/contact"}
-            className="rounded-xl bg-paper px-6 py-4 text-lg font-semibold text-ink hover:bg-wash"
+            className="btn-pop btn-pop-pink rounded-full border-2 border-paper bg-paper px-6 py-4 text-lg font-semibold text-ink hover:bg-mark"
           >
             {c.cta?.label ?? "Request free audit"}
           </Link>

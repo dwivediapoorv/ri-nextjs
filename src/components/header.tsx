@@ -12,7 +12,7 @@ export function Wordmark({ className = "" }: { className?: string }) {
       ri
       <span
         aria-hidden
-        className="ml-1 inline-block h-[1.05em] w-[0.5em] translate-y-[1px] bg-ultra"
+        className="cursor-blink ml-1 inline-block h-[1.05em] w-[0.5em] translate-y-[1px] bg-ultra"
       />
     </span>
   );
@@ -32,7 +32,7 @@ export function Header() {
             <Link
               key={n.href}
               href={n.href}
-              className="text-[0.95rem] font-medium text-ink hover:text-ultra"
+              className="wavy text-[0.95rem] font-semibold text-ink hover:text-ultra"
             >
               {n.label}
             </Link>
@@ -41,7 +41,7 @@ export function Header() {
         <div className="flex items-center gap-2 justify-self-end">
           <Link
             href="/contact?service=other"
-            className="hidden whitespace-nowrap rounded-lg bg-ink px-4 py-2 text-[0.95rem] font-semibold text-paper hover:bg-ultra sm:inline-block"
+            className="hidden whitespace-nowrap rounded-full border-2 border-ink bg-ink px-5 py-2 text-[0.95rem] font-semibold text-paper shadow-[4px_4px_0_0_var(--color-pop)] hover:bg-ultra sm:inline-block"
           >
             Contact Sales
           </Link>

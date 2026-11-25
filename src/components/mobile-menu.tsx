@@ -96,7 +96,7 @@ export function MobileMenu({ items }: { items: Item[] }) {
                   <Link
                     href={n.href}
                     onClick={hide}
-                    className="block py-4 text-xl font-medium hover:text-ultra"
+                    className="display block py-4 text-3xl hover:text-ultra"
                   >
                     {n.label}
                   </Link>
@@ -108,7 +108,7 @@ export function MobileMenu({ items }: { items: Item[] }) {
             href="/contact?service=other"
             onClick={hide}
             style={{ "--i": items.length } as CSSProperties}
-            className="drawer-item mb-2 block rounded-xl bg-ink px-6 py-4 text-center text-lg font-semibold text-paper hover:bg-ultra"
+            className="drawer-item btn-pop btn-pop-pink mb-3 block rounded-full border-2 border-ink bg-ink px-6 py-4 text-center text-lg font-semibold text-paper hover:bg-ultra"
           >
             Contact Sales
           </Link>

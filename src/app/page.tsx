@@ -81,7 +81,7 @@ export default function Home() {
           </p>
           <div className="mt-10 max-w-2xl">
             <AuditForm />
-            <p className="mt-5 text-[0.95rem] text-slate">
+            <p className="mt-7 inline-block -rotate-2 rounded-lg border-2 border-ink bg-pop px-4 py-2 text-[0.95rem] font-semibold text-ink shadow-[4px_4px_0_0_var(--color-ink)]">
               Free, written, and yours to keep. No call required to receive it.
             </p>
           </div>
@@ -89,7 +89,7 @@ export default function Home() {
 
         <aside
           aria-labelledby="audit-covers"
-          className="border-l-2 border-ink pl-6 lg:col-span-5 lg:pl-8"
+          className="rounded-3xl border-2 border-ink bg-white p-6 shadow-[8px_8px_0_0_var(--color-mint)] lg:col-span-5 lg:rotate-1 lg:p-8"
         >
           <h2 id="audit-covers" className="display text-2xl">
             What the audit looks for
@@ -129,7 +129,17 @@ export default function Home() {
                 className="grid gap-8 border-t border-line py-10 md:grid-cols-12"
               >
                 <div className="md:col-span-4">
-                  <h3 className="display text-5xl">{p.name}</h3>
+                  <h3
+                    className={`display inline-block rounded-2xl border-2 border-ink px-4 py-1 text-5xl shadow-[4px_4px_0_0_var(--color-ink)] ${
+                      p.id === "build"
+                        ? "-rotate-2 bg-mark"
+                        : p.id === "rank"
+                          ? "rotate-1 bg-mint"
+                          : "-rotate-1 bg-pop"
+                    }`}
+                  >
+                    {p.name}
+                  </h3>
                   <p className="mt-3 max-w-[30ch] text-slate">
                     {p.description}
                   </p>
@@ -180,11 +190,16 @@ export default function Home() {
           <h2 id="process-h" className="display h-section max-w-[18ch]">
             How an engagement runs
           </h2>
-          <ol className="mt-12 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+          <ol className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
             {steps.map((s, i) => (
-              <li key={s.title} className="border-t-2 border-ink pt-4">
-                <p className="display text-sm text-ultra">Step {i + 1}</p>
-                <h3 className="display mt-1 text-2xl">{s.title}</h3>
+              <li
+                key={s.title}
+                className="card-pop rounded-2xl border-2 border-ink bg-white p-5 shadow-[5px_5px_0_0_var(--color-ink)]"
+              >
+                <p className="display inline-block rounded-full bg-ultra px-3 py-1 text-sm text-white">
+                  Step {i + 1}
+                </p>
+                <h3 className="display mt-3 text-2xl">{s.title}</h3>
                 <p className="mt-2 text-slate">{s.body}</p>
               </li>
             ))}
@@ -198,9 +213,12 @@ export default function Home() {
           <h2 id="why-h" className="display h-section max-w-[20ch]">
             One team builds the store and fixes its search.
           </h2>
-          <div className="mt-12 grid gap-10 md:grid-cols-3">
+          <div className="mt-12 grid gap-8 md:grid-cols-3">
             {reasons.map((r) => (
-              <div key={r.title}>
+              <div
+                key={r.title}
+                className="card-pop rounded-2xl border-2 border-ink bg-white p-6 shadow-[5px_5px_0_0_var(--color-ink)]"
+              >
                 <h3 className="display text-2xl">{r.title}</h3>
                 <p className="mt-3 text-slate">{r.body}</p>
               </div>
@@ -235,13 +253,13 @@ export default function Home() {
             <div className="flex flex-wrap gap-3">
               <Link
                 href="/contact"
-                className="inline-block rounded-xl bg-paper px-6 py-4 text-lg font-semibold text-ink hover:bg-wash"
+                className="btn-pop btn-pop-pink inline-block rounded-full border-2 border-paper bg-paper px-6 py-4 text-lg font-semibold text-ink hover:bg-mark"
               >
                 Request free audit
               </Link>
               <Link
                 href="/contact?service=other"
-                className="inline-block rounded-xl border-2 border-paper px-6 py-[0.875rem] text-lg font-semibold text-paper hover:bg-paper/10"
+                className="inline-block rounded-full border-2 border-paper px-6 py-[0.875rem] text-lg font-semibold text-paper hover:bg-paper/10"
               >
                 Contact Sales
               </Link>

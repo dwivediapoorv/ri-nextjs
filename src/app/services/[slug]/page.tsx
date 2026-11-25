@@ -64,7 +64,7 @@ export default async function ServicePage(props: PageProps<"/services/[slug]">) 
         <p className="mt-6 max-w-[62ch] text-xl text-slate">{s.summary}</p>
         <Link
           href={`/contact?service=${s.slug}`}
-          className="mt-8 inline-block rounded-xl bg-ultra px-6 py-4 text-lg font-semibold text-white shadow-[6px_6px_0_0_var(--color-ink)] hover:bg-ink"
+          className="mt-8 inline-block rounded-full bg-ultra px-6 py-4 text-lg font-semibold text-white border-2 border-ink shadow-[6px_6px_0_0_var(--color-ink)] btn-pop hover:bg-ink"
         >
           Talk to us about this
         </Link>

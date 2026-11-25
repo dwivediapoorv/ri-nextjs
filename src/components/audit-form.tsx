@@ -25,7 +25,7 @@ export function AuditForm({ id = "store" }: { id?: string }) {
         </div>
         <button
           type="submit"
-          className="rounded-xl bg-ultra px-6 py-4 text-lg font-semibold text-white shadow-[6px_6px_0_0_var(--color-ink)] hover:bg-ink sm:ml-2"
+          className="rounded-full bg-ultra px-6 py-4 text-lg font-semibold text-white border-2 border-ink shadow-[6px_6px_0_0_var(--color-ink)] btn-pop hover:bg-ink sm:ml-2"
         >
           Request free audit
         </button>

@@ -63,7 +63,7 @@ export default function CareersPage() {
             {reasons.map((b) => (
               <li
                 key={b.title}
-                className="rounded-2xl border border-line bg-paper p-6"
+                className="card-pop rounded-2xl border-2 border-ink bg-paper p-6 shadow-[5px_5px_0_0_var(--color-ink)]"
               >
                 <span aria-hidden className="block h-1.5 w-8 bg-ultra" />
                 <h3 className="display mt-5 text-xl leading-snug">{b.title}</h3>
