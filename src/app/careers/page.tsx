@@ -24,18 +24,19 @@ const reasons = [
     title: "A small team",
     body: "You work directly with the people who run the studio, and feedback is quick.",
   },
-  {
-    title: "Flexible working hours",
-    body: "We care about the work getting done well, and you have room to arrange your day around it.",
-  },
-  {
-    title: "Remote or in office",
-    body: "Both options are available, so you can work from where you do your best work.",
-  },
 ];
 
 /** Add real quotes from the team here. The section stays hidden until there is at least one. */
 const quotes: { text: string; name: string; role: string }[] = [];
+
+const benefits = [
+  { title: "Flexible working hours", body: "Arrange your day around the work." },
+  { title: "Remote or in office", body: "Both options are available." },
+  { title: "Paid leave", body: "Paid time off." },
+  { title: "Learning support", body: "Support to keep learning on the job." },
+  { title: "Health insurance", body: "Health cover for employees." },
+  { title: "Performance bonus", body: "Bonuses tied to results." },
+];
 
 const linkedin = site.sameAs.find((u) => u.includes("linkedin.com/company"));
 
@@ -72,7 +73,7 @@ export default function CareersPage() {
           <h2 id="why-h" className="display h-section">
             Why work with us
           </h2>
-          <ul className="mt-10 grid gap-x-10 gap-y-8 sm:grid-cols-2">
+          <ul className="mt-10 grid gap-x-10 gap-y-8 sm:grid-cols-2 lg:grid-cols-3">
             {reasons.map((r) => (
               <li key={r.title} className="border-t-2 border-ink pt-4">
                 <h3 className="display text-2xl">{r.title}</h3>
@@ -80,6 +81,26 @@ export default function CareersPage() {
               </li>
             ))}
           </ul>
+        </div>
+      </section>
+
+      <section aria-labelledby="benefits-h" className="border-t border-line bg-wash">
+        <div className="wrap py-16">
+          <h2 id="benefits-h" className="display h-section">
+            Benefits
+          </h2>
+          <ul className="mt-10 grid gap-x-10 gap-y-6 sm:grid-cols-2 lg:grid-cols-3">
+            {benefits.map((b) => (
+              <li key={b.title} className="flex gap-3">
+                <span aria-hidden className="mt-[0.7rem] h-1.5 w-3 flex-none bg-ink" />
+                <div>
+                  <h3 className="display text-xl">{b.title}</h3>
+                  <p className="mt-1 text-slate">{b.body}</p>
+                </div>
+              </li>
+            ))}
+          </ul>
+          <p className="mt-8 text-sm text-slate">Benefits may change.</p>
         </div>
       </section>
 
@@ -101,6 +122,19 @@ export default function CareersPage() {
           </div>
         </section>
       )}
+
+      <section aria-labelledby="fresher-h" className="border-t border-line">
+        <div className="wrap py-16">
+          <h2 id="fresher-h" className="display h-section">
+            Freshers and interns
+          </h2>
+          <p className="mt-4 max-w-[56ch] text-xl text-slate">
+            Starting your career? Freshers and interns are welcome to apply for
+            any role that fits their skills. Mention that you are a fresher or
+            intern in the note on the form below.
+          </p>
+        </div>
+      </section>
 
       <section aria-labelledby="apply-h" className="border-t border-line bg-wash">
         <div className="wrap grid gap-12 py-16 lg:grid-cols-12">
