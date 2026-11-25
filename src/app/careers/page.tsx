@@ -21,7 +21,6 @@ const reasons = [
   { title: "A small team", body: "You work directly with the people who run the studio, and feedback is quick." },
   { title: "Flexible working hours", body: "Arrange your day around the work." },
   { title: "Remote or in office", body: "Both options are available." },
-  { title: "Paid leave", body: "Paid time off." },
   { title: "Learning support", body: "Support to keep learning on the job." },
   { title: "Health insurance", body: "Health cover for employees." },
   { title: "Performance bonus", body: "Bonuses tied to results." },
