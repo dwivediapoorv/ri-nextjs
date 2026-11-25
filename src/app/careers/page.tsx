@@ -11,25 +11,14 @@ export const metadata: Metadata = {
   alternates: { canonical: "/careers" },
 };
 
-const reasons = [
-  {
-    title: "One team, build and growth",
-    body: "Developers and marketers work side by side, so you see what a change does to search and sales.",
-  },
-  {
-    title: "Varied client work",
-    body: "Shopify stores, apps, dashboards, AI agents and websites for brands and businesses of different sizes.",
-  },
-  {
-    title: "A small team",
-    body: "You work directly with the people who run the studio, and feedback is quick.",
-  },
-];
 
 /** Add real quotes from the team here. The section stays hidden until there is at least one. */
 const quotes: { text: string; name: string; role: string }[] = [];
 
-const benefits = [
+const reasons = [
+  { title: "One team, build and growth", body: "Developers and marketers work side by side, so you see what a change does to search and sales." },
+  { title: "Varied client work", body: "Shopify stores, apps, dashboards, AI agents and websites for brands and businesses of different sizes." },
+  { title: "A small team", body: "You work directly with the people who run the studio, and feedback is quick." },
   { title: "Flexible working hours", body: "Arrange your day around the work." },
   { title: "Remote or in office", body: "Both options are available." },
   { title: "Paid leave", body: "Paid time off." },
@@ -68,29 +57,13 @@ export default function CareersPage() {
         )}
       </section>
 
-      <section aria-labelledby="why-h" className="border-t border-line">
+      <section aria-labelledby="why-h" className="border-t border-line bg-wash">
         <div className="wrap py-16">
           <h2 id="why-h" className="display h-section">
             Why work with us
           </h2>
-          <ul className="mt-10 grid gap-x-10 gap-y-8 sm:grid-cols-2 lg:grid-cols-3">
-            {reasons.map((r) => (
-              <li key={r.title} className="border-t-2 border-ink pt-4">
-                <h3 className="display text-2xl">{r.title}</h3>
-                <p className="mt-2 max-w-[44ch] text-slate">{r.body}</p>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
-
-      <section aria-labelledby="benefits-h" className="border-t border-line bg-wash">
-        <div className="wrap py-16">
-          <h2 id="benefits-h" className="display h-section">
-            Benefits
-          </h2>
           <ul className="mt-10 grid gap-x-10 gap-y-6 sm:grid-cols-2 lg:grid-cols-3">
-            {benefits.map((b) => (
+            {reasons.map((b) => (
               <li key={b.title} className="flex gap-3">
                 <span aria-hidden className="mt-[0.7rem] h-1.5 w-3 flex-none bg-ink" />
                 <div>
