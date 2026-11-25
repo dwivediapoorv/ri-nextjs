@@ -16,8 +16,6 @@ export const metadata: Metadata = {
 const quotes: { text: string; name: string; role: string }[] = [];
 
 const reasons = [
-  { title: "One team, build and growth", body: "Developers and marketers work side by side, so you see what a change does to search and sales." },
-  { title: "Varied client work", body: "Shopify stores, apps, dashboards, AI agents and websites for brands and businesses of different sizes." },
   { title: "A small team", body: "You work directly with the people who run the studio, and feedback is quick." },
   { title: "Flexible working hours", body: "Arrange your day around the work." },
   { title: "Remote or in office", body: "Both options are available." },
@@ -61,7 +59,7 @@ export default function CareersPage() {
           <h2 id="why-h" className="display h-section">
             Why work with us
           </h2>
-          <ul className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <ul className="mt-10 grid auto-rows-fr gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {reasons.map((b) => (
               <li
                 key={b.title}
