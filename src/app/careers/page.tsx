@@ -31,10 +31,6 @@ const reasons = [
     title: "Remote or in office",
     body: "Both options are available, so you can work from where you do your best work.",
   },
-  {
-    title: "Clear briefs, plain language",
-    body: "We write down what a job needs and why, and say it simply.",
-  },
 ];
 
 const linkedin = site.sameAs.find((u) => u.includes("linkedin.com/company"));
