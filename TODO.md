@@ -15,13 +15,15 @@ Open tasks for the Rare Input website. Tick them off as they are done.
 
 - [ ] **Social preview image.** Links shared on LinkedIn, WhatsApp and Facebook show no image. Needs an image (1200 x 630) and the Open Graph and Twitter card tags.
 - [ ] **WhatsApp button.** Add a chat button, with the number to use.
-- [ ] **Case study results.** Add real numbers to the Clean & Conscious Care page if there are any (pages indexed, rankings, orders). Also confirm whether the store has launched, whether the Conversions API is now working, and that Charu is happy with how the Meta policy work is described.
+- [ ] **Clean & Conscious Care.** No numbers on this page, by choice. Confirm whether the Conversions API is now working (the page describes it as a plan), and that Charu is happy with how the Meta policy work is described. A one-line testimonial from Charu would help.
+- [ ] **UPORTHOCON 2025 case study.** Confirm the Ghaziabad Orthopaedic Association is happy to be named. Check the wording: attendees sign up in the portal and payments are taken online. Add if available: the exact number of registrations (the page says around 750 doctors and 1,200 students), which payment gateway was used, anything tricky that was solved (for example different fees for members and non-members), and a screenshot of the registration page. The portal is down, so there is no live link.
+- [ ] **The String Thing case study.** Confirm the school is happy to be named, and that the wording about booking a trial is right. Add if available: how many students use the app, whether students log in, how songs and tabs are added, and a screenshot of the app.
 
 ## Later
 
 - [ ] **Better founder photo (optional).** The current one is a night street shot, cropped to head and shoulders. Replace `public/founder.webp` (square, at least 640 x 640) with a cleaner version.
 - [ ] **Visible social links.** LinkedIn, Facebook and Instagram are in the structured data only. Add footer links, starting with LinkedIn, once the profiles have content.
-- [ ] **Second case study**, and real testimonials once there are some.
+- [ ] **More case studies**, and real testimonials once there are some.
 - [ ] **Blog**, to put the content SEO service into practice.
 - [ ] **Booking link** (for example Cal.com) for audit calls.
 - [ ] **301 redirects** if any pages are renamed or moved. Do not redirect missing pages to the home page.
@@ -29,7 +31,7 @@ Open tasks for the Rare Input website. Tick them off as they are done.
 ## Done
 
 - [x] Home, services (9), work, about and contact pages
-- [x] Case study: Clean & Conscious Care
+- [x] Case studies: Clean & Conscious Care, UPORTHOCON 2025, The String Thing
 - [x] Breadcrumb and organization structured data (LinkedIn, Facebook, Instagram)
 - [x] Logo and favicon
 - [x] Branded 404 page
