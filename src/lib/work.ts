@@ -93,6 +93,35 @@ export const cases: CaseStudy[] = [
       href: "/contact?service=other",
     },
   },
+  {
+    slug: "the-string-thing",
+    client: "The String Thing",
+    title: "A website and a tab-playing app for a guitar school",
+    summary:
+      "A website for a guitar school in Noida, plus a web app where students play the tabs of the songs they have learned, right in the browser.",
+    url: "https://thestringthing.in",
+    facts: [
+      { label: "Client", value: "The String Thing, a guitar school in Noida" },
+      { label: "Platform", value: "Website and a browser-based app" },
+      { label: "Scope", value: "Website, student tab-playing app" },
+    ],
+    brief:
+      "The String Thing teaches one-on-one, in-person guitar lessons in Noida. We built the school's website, and an app that lets students play the tabs of any song they have learned, in their browser, without needing anything installed.",
+    sections: [
+      {
+        pillar: "build",
+        items: [
+          "Built the school's website, where new students can learn about the lessons and book a trial.",
+          "Built an app where students play the tabs of the songs they have learned, in the browser.",
+        ],
+      },
+    ],
+    cta: {
+      heading: "Need a website or a custom app?",
+      label: "Contact Sales",
+      href: "/contact?service=other",
+    },
+  },
 ];
 
 export const caseBySlug = (slug: string) => cases.find((c) => c.slug === slug);
