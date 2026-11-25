@@ -4,7 +4,7 @@
 export function AuditForm({ id = "store" }: { id?: string }) {
   return (
     <form action="/contact" method="get" className="w-full">
-      <label htmlFor={id} className="mb-2 block text-[0.95rem] font-medium">
+      <label htmlFor={id} className="sr-only">
         Your store URL
       </label>
       <div className="flex flex-col gap-3 sm:flex-row">
