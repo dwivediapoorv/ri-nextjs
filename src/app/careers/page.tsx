@@ -61,14 +61,15 @@ export default function CareersPage() {
           <h2 id="why-h" className="display h-section">
             Why work with us
           </h2>
-          <ul className="mt-10 grid gap-x-10 gap-y-6 sm:grid-cols-2 lg:grid-cols-3">
+          <ul className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {reasons.map((b) => (
-              <li key={b.title} className="flex gap-3">
-                <span aria-hidden className="mt-[0.7rem] h-1.5 w-3 flex-none bg-ink" />
-                <div>
-                  <h3 className="display text-xl">{b.title}</h3>
-                  <p className="mt-1 text-slate">{b.body}</p>
-                </div>
+              <li
+                key={b.title}
+                className="rounded-2xl border border-line bg-paper p-6"
+              >
+                <span aria-hidden className="block h-1.5 w-8 bg-ultra" />
+                <h3 className="display mt-5 text-xl leading-snug">{b.title}</h3>
+                <p className="mt-2 text-slate">{b.body}</p>
               </li>
             ))}
           </ul>
