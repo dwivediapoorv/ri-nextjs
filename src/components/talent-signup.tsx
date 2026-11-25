@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 
 type Status =
@@ -65,6 +66,13 @@ export function TalentSignup() {
         <label htmlFor="t-website">Leave this empty</label>
         <input id="t-website" name="website" tabIndex={-1} autoComplete="off" />
       </div>
+      <p className="mt-3 text-sm text-slate">
+        We use your email only to tell you about roles. See our{" "}
+        <Link href="/privacy" className="underline underline-offset-4 hover:text-ultra">
+          Privacy Policy
+        </Link>
+        .
+      </p>
       {status.state === "error" && (
         <p role="alert" className="mt-4 border-l-4 border-ink bg-mark/60 p-4">
           {status.message}

@@ -91,6 +91,14 @@ export function Footer() {
             &nbsp;&nbsp;
             <Link href="/contact" className="hover:text-mark">
               Contact
+            </Link>{" "}
+            &nbsp;&nbsp;
+            <Link href="/privacy" className="hover:text-mark">
+              Privacy
+            </Link>{" "}
+            &nbsp;&nbsp;
+            <Link href="/terms" className="hover:text-mark">
+              Terms
             </Link>
           </p>
         </div>

@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 
 type Status =
@@ -151,6 +152,13 @@ export function CareersForm() {
       >
         {status.state === "sending" ? "Sending…" : "Send application"}
       </button>
+      <p className="text-sm text-slate">
+        By sending this, you agree to our{" "}
+        <Link href="/privacy" className="underline underline-offset-4 hover:text-ultra">
+          Privacy Policy
+        </Link>
+        .
+      </p>
     </form>
   );
 }
