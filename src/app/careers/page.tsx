@@ -16,8 +16,8 @@ const reasons = [
     body: "Developers and marketers work side by side, so you see what a change does to search and sales.",
   },
   {
-    title: "Real client work",
-    body: "Shopify stores, apps, dashboards and AI agents for e-commerce brands, not practice projects.",
+    title: "Varied client work",
+    body: "Shopify stores, apps, dashboards, AI agents and websites for brands and businesses of different sizes.",
   },
   {
     title: "A small team",
