@@ -17,11 +17,11 @@ const quotes: { text: string; name: string; role: string }[] = [];
 
 const reasons = [
   { title: "A small team", body: "You work directly with the people who run the studio, and feedback is quick." },
-  { title: "Flexible working hours", body: "Arrange your day around the work." },
-  { title: "Remote or in office", body: "Both options are available." },
-  { title: "Learning support", body: "Support to keep learning on the job." },
-  { title: "Health insurance", body: "Health cover for employees." },
-  { title: "Performance bonus", body: "Bonuses tied to results." },
+  { title: "Flexible working hours", body: "Arrange your day around the work, so you can focus when you are at your best." },
+  { title: "Remote or in office", body: "Work from home or from the office, whichever lets you do your best work." },
+  { title: "Learning support", body: "Support to keep learning on the job, so your skills grow as the work does." },
+  { title: "Health insurance", body: "Health cover for employees, so medical costs are one less thing to worry about." },
+  { title: "Performance bonus", body: "Bonuses tied to results, so strong work is recognised and rewarded in your pay." },
 ];
 
 const linkedin = site.sameAs.find((u) => u.includes("linkedin.com/company"));
@@ -71,7 +71,6 @@ export default function CareersPage() {
               </li>
             ))}
           </ul>
-          <p className="mt-8 text-sm text-slate">Benefits may change.</p>
         </div>
       </section>
 
