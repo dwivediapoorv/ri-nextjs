@@ -8,6 +8,8 @@ export type Service = {
   name: string;
   tagline: string;
   summary: string;
+  /** Optional USD starting price, shown on the service page. */
+  startingFrom?: { usd: number; note: string };
   /** What the client gives us to start. */
   bring: string[];
   /** What the client receives. */
@@ -196,6 +198,10 @@ export const services: Service[] = [
     pillar: "rank",
     name: "Technical SEO",
     tagline: "Fix what stops Google from crawling and indexing your store.",
+    startingFrom: {
+      usd: 249,
+      note: "Starting price for a small store. The final quote depends on catalog size, installed apps and whether you want us to implement the fixes.",
+    },
     summary:
       "Shopify creates duplicate product URLs, thin filtered pages and script-heavy templates that waste crawl budget and slow pages down. We audit crawling, indexing, structured data and Core Web Vitals, then fix them in the theme.",
     bring: [
@@ -213,6 +219,10 @@ export const services: Service[] = [
       "hreflang and Shopify Markets setup for international stores",
     ],
     faqs: [
+      {
+        q: "What does technical SEO cost?",
+        a: "Technical SEO starts at $249 USD for a small store. Larger catalogs, many apps, migrations and hands-on implementation of the fixes cost more. We confirm a fixed price after a quick look at your store.",
+      },
       {
         q: "Shopify limits what you can change. Is technical SEO still worth it?",
         a: "Yes. Most problems live in the theme, collections and apps, and those are ours to change. Things Shopify fixes, like the /products/ URL prefix, are handled with canonicals rather than worked around.",

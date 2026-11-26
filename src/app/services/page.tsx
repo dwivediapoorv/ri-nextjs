@@ -45,6 +45,11 @@ export default function ServicesPage() {
                     </Link>
                   </h3>
                   <p className="mt-3 max-w-[62ch] text-slate">{s.summary}</p>
+                  {s.startingFrom && (
+                    <p className="display mt-3 text-lg text-ultra">
+                      From ${s.startingFrom.usd} USD
+                    </p>
+                  )}
                   <p className="display mt-5 text-lg">Includes</p>
                   <ul className="mt-2 max-w-[62ch] list-disc space-y-1 pl-5 marker:text-ultra">
                     {s.get.slice(0, 3).map((g) => (

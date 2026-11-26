@@ -44,6 +44,16 @@ export default async function ServicePage(props: PageProps<"/services/[slug]">) 
     description: s.summary,
     provider: { "@id": `${site.url}/#organization` },
     url: `${site.url}/services/${s.slug}`,
+    ...(s.startingFrom && {
+      offers: {
+        "@type": "Offer",
+        priceSpecification: {
+          "@type": "PriceSpecification",
+          minPrice: s.startingFrom.usd,
+          priceCurrency: "USD",
+        },
+      },
+    }),
   };
 
   return (
@@ -62,6 +72,14 @@ export default async function ServicePage(props: PageProps<"/services/[slug]">) 
           {s.tagline}
         </p>
         <p className="mt-6 max-w-[62ch] text-xl text-slate">{s.summary}</p>
+        {s.startingFrom && (
+          <p className="mt-6 max-w-[62ch]">
+            <span className="display text-2xl">
+              From ${s.startingFrom.usd} USD
+            </span>
+            <span className="mt-1 block text-slate">{s.startingFrom.note}</span>
+          </p>
+        )}
         <Link
           href={`/contact?service=${s.slug}`}
           className="mt-8 inline-block rounded-xl bg-ultra px-6 py-4 text-lg font-semibold text-white shadow-[6px_6px_0_0_var(--color-ink)] hover:bg-ink"
