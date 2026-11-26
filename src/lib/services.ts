@@ -161,6 +161,46 @@ export const services: Service[] = [
     ],
   },
   {
+    slug: "ecommerce-seo",
+    pillar: "rank",
+    name: "Ecommerce SEO",
+    tagline: "The full search program for your Shopify store, in one plan.",
+    startingFrom: {
+      options: [{ label: "Monthly plan", usd: 1499, per: "month" }],
+      note: "Starting price for a small store. It bundles technical SEO, on-page SEO and content at a lower price than buying them separately, and adds local SEO if you have shops or serve a local area. We confirm a fixed price after a quick look at your store.",
+    },
+    summary:
+      "One monthly plan that covers everything search needs: a technical audit and fixes, on-page work on collections and products, content that answers what shoppers search, and local SEO when you have physical stores or serve a local area. You get one team and one report instead of three separate projects.",
+    bring: [
+      "Search Console and GA4 access",
+      "Staff access to the Shopify admin and theme",
+      "Your top products, collections and margins",
+      "For local SEO: your shop addresses or service areas, and access to your Google Business Profile",
+    ],
+    get: [
+      "A technical audit and fixes: crawling, indexing, speed, schema and redirects",
+      "Keyword mapping and optimization for collections, products and the blog",
+      "Buying guides and category content planned from what you sell",
+      "Local SEO where it applies: Google Business Profile setup and upkeep, local landing pages, listings and review requests",
+      "Fixes made on a duplicate theme and published after your review",
+      "A monthly report with clicks, rankings and revenue from search",
+    ],
+    faqs: [
+      {
+        q: "How is this different from your technical and on-page SEO services?",
+        a: "Ecommerce SEO is those services combined, plus content and local SEO, as one monthly plan. If you only need an audit, or only need your key pages rewritten, the standalone services cost less.",
+      },
+      {
+        q: "Do we need local SEO?",
+        a: "Only if you have a physical shop, pickup points or customers in a specific area. If you sell online only, we leave local SEO out and the plan focuses on the rest.",
+      },
+      {
+        q: "What does it cost?",
+        a: "Plans start at $1,499 USD a month for a small store. Larger catalogs, several locations and heavy content needs cost more. We confirm a fixed price after looking at your store.",
+      },
+    ],
+  },
+  {
     slug: "on-page-seo",
     pillar: "rank",
     name: "On-page SEO",
