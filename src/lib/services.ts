@@ -9,7 +9,10 @@ export type Service = {
   tagline: string;
   summary: string;
   /** Optional USD starting price, shown on the service page. */
-  startingFrom?: { usd: number; note: string };
+  startingFrom?: {
+    options: { label: string; usd: number; per?: string }[];
+    note: string;
+  };
   /** What the client gives us to start. */
   bring: string[];
   /** What the client receives. */
@@ -162,6 +165,13 @@ export const services: Service[] = [
     pillar: "rank",
     name: "On-page SEO",
     tagline: "Every collection and product page mapped to a search.",
+    startingFrom: {
+      options: [
+        { label: "One-time project", usd: 1299 },
+        { label: "Monthly retainer", usd: 999, per: "month" },
+      ],
+      note: "Start with a one-time project that optimizes your key pages, then keep going on a monthly plan for new products, collections and reporting. Starting prices are for a small store; we confirm a fixed price after a quick look at your catalog.",
+    },
     summary:
       "We tie keyword research to your catalog structure: which collections should rank for category terms, which products for specific ones, and what each page needs to say. Then we write and implement titles, headings, copy, internal links and schema in your store.",
     bring: [
@@ -176,9 +186,13 @@ export const services: Service[] = [
       "Collection page copy and FAQ sections",
       "Product page template improvements, including image alt text and review markup",
       "An internal linking plan covering navigation, breadcrumbs and related products",
-      "A monthly report with clicks and rankings by page group",
+      "A report with clicks and rankings by page group, monthly on the retainer",
     ],
     faqs: [
+      {
+        q: "Is this a one-time project or a monthly service?",
+        a: "Both. The one-time project starts at $1,299 USD and optimizes your most important pages: keyword map, titles, headings, copy and template fixes. The monthly retainer starts at $999 USD and covers new products, collections and posts, refreshing pages that slip, and reporting. Most stores start with the project and move to the retainer.",
+      },
       {
         q: "How long until we see results?",
         a: "New and rewritten pages usually take a few months to settle. From the first month we report leading indicators: pages indexed, impressions and average position, so you can see movement before it reaches revenue.",
@@ -199,7 +213,7 @@ export const services: Service[] = [
     name: "Technical SEO",
     tagline: "Fix what stops Google from crawling and indexing your store.",
     startingFrom: {
-      usd: 249,
+      options: [{ label: "Audit and fixes", usd: 249 }],
       note: "Starting price for a small store. The final quote depends on catalog size, installed apps and whether you want us to implement the fixes.",
     },
     summary:

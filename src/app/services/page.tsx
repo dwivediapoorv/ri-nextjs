@@ -47,7 +47,12 @@ export default function ServicesPage() {
                   <p className="mt-3 max-w-[62ch] text-slate">{s.summary}</p>
                   {s.startingFrom && (
                     <p className="display mt-3 text-lg text-ultra">
-                      From ${s.startingFrom.usd} USD
+                      {s.startingFrom.options
+                        .map(
+                          (o) =>
+                            `${o.label} from $${o.usd.toLocaleString("en-US")}${o.per ? `/${o.per}` : ""}`,
+                        )
+                        .join(" · ")}
                     </p>
                   )}
                   <p className="display mt-5 text-lg">Includes</p>

@@ -45,14 +45,15 @@ export default async function ServicePage(props: PageProps<"/services/[slug]">) 
     provider: { "@id": `${site.url}/#organization` },
     url: `${site.url}/services/${s.slug}`,
     ...(s.startingFrom && {
-      offers: {
+      offers: s.startingFrom.options.map((o) => ({
         "@type": "Offer",
+        name: o.label,
         priceSpecification: {
           "@type": "PriceSpecification",
-          minPrice: s.startingFrom.usd,
+          minPrice: o.usd,
           priceCurrency: "USD",
         },
-      },
+      })),
     }),
   };
 
@@ -74,8 +75,13 @@ export default async function ServicePage(props: PageProps<"/services/[slug]">) 
         <p className="mt-6 max-w-[62ch] text-xl text-slate">{s.summary}</p>
         {s.startingFrom && (
           <p className="mt-6 max-w-[62ch]">
-            <span className="display text-2xl">
-              From ${s.startingFrom.usd} USD
+            <span className="display block text-2xl">
+              {s.startingFrom.options.map((o) => (
+                <span key={o.label} className="block">
+                  {o.label}: from ${o.usd.toLocaleString("en-US")} USD
+                  {o.per ? ` / ${o.per}` : ""}
+                </span>
+              ))}
             </span>
             <span className="mt-1 block text-slate">{s.startingFrom.note}</span>
           </p>
