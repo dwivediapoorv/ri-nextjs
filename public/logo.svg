@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Rare Input">
+  <rect width="512" height="512" rx="96" fill="#01171f"/>
+  <g fill="none" stroke="#F3F4FA" stroke-width="44">
+    <path d="M142 362V198"/>
+    <path d="M142 276C142 226 176 202 232 206"/>
+  </g>
+  <circle cx="292" cy="172" r="26" fill="#F3F4FA"/>
+  <rect x="270" y="212" width="44" height="150" fill="#F3F4FA"/>
+  <rect x="348" y="198" width="88" height="164" fill="#3338E8"/>
+</svg>
