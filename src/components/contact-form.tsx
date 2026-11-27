@@ -117,6 +117,7 @@ export function ContactForm({
               {s.name}
             </option>
           ))}
+          <option value="helpdesk">Helpdesk tool demo</option>
           <option value="other">Something else</option>
         </select>
       </div>

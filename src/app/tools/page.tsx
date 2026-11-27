@@ -1,0 +1,47 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import { tools } from "@/lib/tools";
+
+export const metadata: Metadata = {
+  title: "Tools",
+  description:
+    "Software we have built ourselves. Start with rare Input Helpdesk, a shared-inbox tool that turns emails into tickets.",
+  alternates: { canonical: "/tools" },
+};
+
+export default function ToolsPage() {
+  const categories = [...new Set(tools.map((t) => t.category))];
+  return (
+    <>
+      <section className="wrap pb-10 pt-14 sm:pt-20">
+        <h1 className="display h-hero max-w-[12ch]">Tools</h1>
+        <p className="mt-6 max-w-[52ch] text-xl text-slate">
+          Software we have built ourselves, for teams that want less inbox chaos and more done.
+        </p>
+      </section>
+      {categories.map((cat) => (
+        <section key={cat} className="wrap pb-20" aria-labelledby={`${cat}-h`}>
+          <h2 id={`${cat}-h`} className="display text-3xl">
+            {cat}
+          </h2>
+          <ul className="mt-6 border-t border-line">
+            {tools
+              .filter((t) => t.category === cat)
+              .map((t) => (
+                <li key={t.slug} className="border-b border-line">
+                  <Link href={`/tools/${t.slug}`} className="group grid gap-4 py-10 md:grid-cols-12">
+                    <p className="display text-xl text-slate md:col-span-3">{t.category}</p>
+                    <div className="md:col-span-9">
+                      <h3 className="display text-3xl group-hover:text-ultra sm:text-4xl">{t.name}</h3>
+                      <p className="display mt-2 text-xl text-ultra">{t.tagline}</p>
+                      <p className="mt-3 max-w-[60ch] text-slate">{t.summary}</p>
+                    </div>
+                  </Link>
+                </li>
+              ))}
+          </ul>
+        </section>
+      ))}
+    </>
+  );
+}
