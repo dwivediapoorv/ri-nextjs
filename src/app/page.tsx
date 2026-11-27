@@ -1,11 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
-import { AuditForm } from "@/components/audit-form";
-import { FaqList } from "@/components/faq-list";
-import { Ladder } from "@/components/ladder";
+import { Hero } from "@/components/sections/hero";
+import { Stats } from "@/components/sections/stats";
+import { Capabilities } from "@/components/sections/capabilities";
+import { ServicesBento } from "@/components/sections/services-bento";
+import { Pricing } from "@/components/sections/pricing";
+import { FaqSection } from "@/components/sections/faq";
+import { Cta } from "@/components/sections/cta";
 import { StoreMock } from "@/components/store-mock";
 import { cases } from "@/lib/work";
-import { faqs, priceLabel, services } from "@/lib/services";
+import { faqs } from "@/lib/services";
 
 const leaks = [
   {
@@ -36,50 +40,12 @@ const steps = [
 ];
 
 export default function Home() {
-  const featured = services.filter((s) => s.featured);
-
   return (
     <>
-      {/* Hero */}
-      <section className="wrap grid items-center gap-12 pb-20 pt-12 sm:pt-16 lg:grid-cols-12">
-        <div className="lg:col-span-6">
-          <h1 className="display h-hero rise" style={{ "--d": 0 } as React.CSSProperties}>
-            Shopify stores that rank, load fast and sell.
-          </h1>
-          <p className="rise mt-6 max-w-[34ch] text-xl text-slate sm:text-2xl" style={{ "--d": 2 } as React.CSSProperties}>
-            We build, fix and grow Shopify stores. Send your URL and we will show you the three biggest things holding it back.
-          </p>
-          <div className="rise mt-8" style={{ "--d": 3 } as React.CSSProperties}>
-            <AuditForm id="hero" />
-          </div>
-          <p className="rise mt-6 text-slate" style={{ "--d": 4 } as React.CSSProperties}>
-            Technical SEO from <strong className="text-ink">$249</strong>. Store builds from{" "}
-            <strong className="text-ink">$2,500</strong>.{" "}
-            <Link href="/pricing" className="font-semibold text-volt underline underline-offset-4 hover:text-ink">
-              See pricing
-            </Link>
-          </p>
-        </div>
-        <div className="rise lg:col-span-6" style={{ "--d": 3 } as React.CSSProperties}>
-          <Ladder />
-        </div>
-      </section>
+      <Hero />
 
-      {/* Proof */}
-      <section aria-label="Recent work" className="border-y-2 border-ink bg-white">
-        <div className="wrap grid gap-px sm:grid-cols-3">
-          {cases.map((c) => (
-            <Link
-              key={c.slug}
-              href="/work"
-              className="group py-6 sm:px-6 sm:first:pl-0 sm:last:pr-0"
-            >
-              <p className="display text-2xl group-hover:text-volt">{c.result}</p>
-              <p className="mt-1 text-slate">{c.client}</p>
-            </Link>
-          ))}
-        </div>
-      </section>
+      <Stats />
+      <Capabilities />
 
       {/* Where stores leak */}
       <section className="wrap pt-24">
@@ -97,32 +63,7 @@ export default function Home() {
         </ul>
       </section>
 
-      {/* Services */}
-      <section className="wrap pt-24">
-        <div className="flex flex-wrap items-end justify-between gap-4">
-          <h2 className="display h-section max-w-[16ch]">What we do, and what it costs</h2>
-          <Link href="/services" className="font-bold text-volt underline underline-offset-4 hover:text-ink">
-            All services
-          </Link>
-        </div>
-        <ul className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-          {featured.map((s) => (
-            <li key={s.slug}>
-              <Link
-                href={`/services#${s.slug}`}
-                className="lift flex h-full flex-col rounded-2xl border-2 border-ink bg-white p-6"
-              >
-                <span className="display text-2xl">{s.name}</span>
-                <span className="mt-2 flex-1 text-slate">{s.short}</span>
-                <span className="mt-5 flex items-center justify-between border-t-2 border-line pt-4">
-                  <span className="font-bold">{priceLabel(s)}</span>
-                  <span className="text-sm text-slate">{s.time}</span>
-                </span>
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </section>
+      <ServicesBento />
 
       {/* Work */}
       <section className="wrap pt-24">
@@ -215,26 +156,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* FAQ */}
-      <section className="wrap grid gap-10 pt-24 lg:grid-cols-12">
-        <h2 className="display h-section lg:col-span-4">Questions before you send your URL</h2>
-        <div className="lg:col-span-8">
-          <FaqList items={faqs} />
-        </div>
-      </section>
+      <Pricing />
 
-      {/* Final CTA */}
-      <section className="wrap pt-24">
-        <div className="rounded-3xl bg-volt p-8 text-white sm:p-14">
-          <h2 className="display h-section max-w-[18ch]">Find out what your store is missing</h2>
-          <p className="mt-4 max-w-[44ch] text-lg text-white/85">
-            Free, written, and yours to keep even if we never work together.
-          </p>
-          <div className="mt-8">
-            <AuditForm id="cta" dark />
-          </div>
-        </div>
-      </section>
+      <FaqSection items={faqs} />
+
+      <Cta />
     </>
   );
 }
