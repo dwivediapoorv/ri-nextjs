@@ -75,37 +75,44 @@ export const toolBySlug = (slug: string) => tools.find((t) => t.slug === slug);
 export type Extension = {
   name: string;
   summary: string;
-  /** Chrome Web Store link. Add it when known; the card links out once it is set. */
+  /** Our own landing page for the extension. */
+  landing: string;
+  /** Chrome Web Store link. */
   url?: string;
 };
 
 export const extensions: Extension[] = [
   {
     name: "Hawk Eye SEO Analyzer",
+    landing: "https://hawkeye.rareinput.com",
     summary:
       "Run a fast SEO check on any page in one click: titles, meta descriptions, headings, links and image alt text.",
     url: "https://chromewebstore.google.com/detail/hawk-eye-seo-analyzer/ekjmdffolkdkmedpecfhbdmjappekobe",
   },
   {
     name: "ADA Compliance Checker",
+    landing: "https://ada.rareinput.com",
     summary:
       "Check any page for accessibility problems against ADA and WCAG 2.1 AA, with failing elements highlighted by severity.",
     url: "https://chromewebstore.google.com/detail/ada-compliance-checker/lbhjbhonkoihheickcjinkajdcgepnfk",
   },
   {
     name: "Font Scope",
+    landing: "https://fontscope.rareinput.com",
     summary:
       "Inspect the text styling on any page in one click: font families, weights, sizes, colours and contrast ratios.",
     url: "https://chromewebstore.google.com/detail/font-scope/fhgoadljfppbiphkcphalmhbjmbjkhgb",
   },
   {
     name: "Color Palette Extractor",
+    landing: "https://palette.rareinput.com",
     summary:
       "Scan any page in one click and get its colours, with hex codes you can copy.",
     url: "https://chromewebstore.google.com/detail/color-palette-extractor/hiopkkjnogdadhhcfkmjgmlelampebog",
   },
   {
     name: "Image Inspector",
+    landing: "https://imageinspector.rareinput.com",
     summary:
       "Audit the images on any page and see how much file size you could save: oversized files, missing alt text, WebP and AVIF candidates and lazy-loading mistakes.",
     url: "https://chromewebstore.google.com/detail/image-inspector/ilcjicpnflhifiaoefdfmpbiccedcing",
