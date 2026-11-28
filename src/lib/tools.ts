@@ -82,7 +82,9 @@ export type Extension = {
 export const extensions: Extension[] = [
   {
     name: "Hawk Eye SEO Analyzer",
-    summary: "Check the SEO of any page from your browser toolbar.",
+    summary:
+      "Run a fast SEO check on any page in one click: titles, meta descriptions, headings, links and image alt text.",
+    url: "https://chromewebstore.google.com/detail/hawk-eye-seo-analyzer/ekjmdffolkdkmedpecfhbdmjappekobe",
   },
   {
     name: "ADA Compliance Checker",
