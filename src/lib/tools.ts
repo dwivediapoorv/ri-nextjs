@@ -98,7 +98,9 @@ export const extensions: Extension[] = [
   },
   {
     name: "Color Palette Extractor",
-    summary: "Pull the colours out of any page.",
+    summary:
+      "Scan any page in one click and get its colours, with hex codes you can copy.",
+    url: "https://chromewebstore.google.com/detail/color-palette-extractor/hiopkkjnogdadhhcfkmjgmlelampebog",
   },
   {
     name: "Image Inspector",
