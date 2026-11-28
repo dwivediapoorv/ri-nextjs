@@ -94,7 +94,9 @@ export const extensions: Extension[] = [
   },
   {
     name: "Font Scope",
-    summary: "See which fonts a page uses.",
+    summary:
+      "Inspect the text styling on any page in one click: font families, weights, sizes, colours and contrast ratios.",
+    url: "https://chromewebstore.google.com/detail/font-scope/fhgoadljfppbiphkcphalmhbjmbjkhgb",
   },
   {
     name: "Color Palette Extractor",
