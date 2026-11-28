@@ -88,7 +88,9 @@ export const extensions: Extension[] = [
   },
   {
     name: "ADA Compliance Checker",
-    summary: "Spot accessibility issues on a page as you browse.",
+    summary:
+      "Check any page for accessibility problems against ADA and WCAG 2.1 AA, with failing elements highlighted by severity.",
+    url: "https://chromewebstore.google.com/detail/ada-compliance-checker/lbhjbhonkoihheickcjinkajdcgepnfk",
   },
   {
     name: "Font Scope",
