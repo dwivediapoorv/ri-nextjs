@@ -106,6 +106,8 @@ export const extensions: Extension[] = [
   },
   {
     name: "Image Inspector",
-    summary: "Inspect the images on a page.",
+    summary:
+      "Audit the images on any page and see how much file size you could save: oversized files, missing alt text, WebP and AVIF candidates and lazy-loading mistakes.",
+    url: "https://chromewebstore.google.com/detail/image-inspector/ilcjicpnflhifiaoefdfmpbiccedcing",
   },
 ];
