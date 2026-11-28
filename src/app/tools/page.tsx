@@ -53,7 +53,12 @@ export default function ToolsPage() {
         <ul className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {extensions.map((e) => (
             <li key={e.name} className="flex flex-col rounded-2xl border-2 border-ink bg-paper p-6">
-              <h3 className="display text-2xl">{e.name}</h3>
+              <div className="flex items-start justify-between gap-3">
+                <h3 className="display text-2xl">{e.name}</h3>
+                <span className="mt-1 flex-none rounded-full bg-ink px-3 py-0.5 text-sm font-semibold text-paper">
+                  Free
+                </span>
+              </div>
               <p className="mt-2 flex-1 text-slate">{e.summary}</p>
               <p className="mt-5 flex flex-wrap gap-x-5 gap-y-2 font-semibold">
                 <a
