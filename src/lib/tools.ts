@@ -71,3 +71,33 @@ export const tools: Tool[] = [
 ];
 
 export const toolBySlug = (slug: string) => tools.find((t) => t.slug === slug);
+
+export type Extension = {
+  name: string;
+  summary: string;
+  /** Chrome Web Store link. Add it when known; the card links out once it is set. */
+  url?: string;
+};
+
+export const extensions: Extension[] = [
+  {
+    name: "Hawk Eye SEO Analyzer",
+    summary: "Check the SEO of any page from your browser toolbar.",
+  },
+  {
+    name: "ADA Compliance Checker",
+    summary: "Spot accessibility issues on a page as you browse.",
+  },
+  {
+    name: "Font Scope",
+    summary: "See which fonts a page uses.",
+  },
+  {
+    name: "Color Palette Extractor",
+    summary: "Pull the colours out of any page.",
+  },
+  {
+    name: "Image Inspector",
+    summary: "Inspect the images on a page.",
+  },
+];

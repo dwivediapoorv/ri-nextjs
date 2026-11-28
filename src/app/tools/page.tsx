@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { tools } from "@/lib/tools";
+import { extensions, tools } from "@/lib/tools";
 
 export const metadata: Metadata = {
   title: "Tools",
   description:
-    "Software we have built ourselves. Start with rare Input Helpdesk, a shared-inbox tool that turns emails into tickets.",
+    "Software we have built ourselves: rare Input Helpdesk, a shared-inbox tool that turns emails into tickets, and a set of Chrome extensions.",
   alternates: { canonical: "/tools" },
 };
 
@@ -42,6 +42,34 @@ export default function ToolsPage() {
           </ul>
         </section>
       ))}
+
+      <section className="wrap pb-20" aria-labelledby="ext-h">
+        <h2 id="ext-h" className="display text-3xl">
+          Chrome extensions
+        </h2>
+        <p className="mt-3 max-w-[56ch] text-slate">
+          Small browser tools we built and published on the Chrome Web Store.
+        </p>
+        <ul className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {extensions.map((e) => (
+            <li key={e.name} className="flex flex-col rounded-2xl border-2 border-ink bg-paper p-6">
+              <h3 className="display text-2xl">{e.name}</h3>
+              <p className="mt-2 flex-1 text-slate">{e.summary}</p>
+              {e.url ? (
+                <a
+                  href={e.url}
+                  rel="noopener"
+                  className="mt-5 font-semibold text-ultra underline underline-offset-4 hover:text-ink"
+                >
+                  View on Chrome Web Store
+                </a>
+              ) : (
+                <p className="mt-5 text-sm font-semibold text-slate">On the Chrome Web Store</p>
+              )}
+            </li>
+          ))}
+        </ul>
+      </section>
     </>
   );
 }

@@ -41,3 +41,7 @@ Open tasks for the Rare Input website. Tick them off as they are done.
 - [x] Branded 404 page
 - [x] Founder bio on the About page (Noida, personal LinkedIn)
 - [x] Sitemap and robots file
+
+## Tools page
+- [ ] Add Chrome Web Store links for the five extensions (Hawk Eye SEO Analyzer, ADA Compliance Checker, Font Scope, Color Palette Extractor, Image Inspector) in `src/lib/tools.ts`, and check the one-line descriptions.
+- [ ] Helpdesk: confirm product name, supported email providers, pricing and add a screenshot.
